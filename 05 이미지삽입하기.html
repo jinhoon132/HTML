@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>05 이미지삽입하기</title>
+	<head>
+	<!--
+		메타태그(p74) : 메타데이터를 작성하는 태그
+		메타데이터 : 문서(파일)를 설명하는 정보를 나타내는 데이터
+				(작성자, 작성일자, 파일의 용량)
+	-->
+	<meta charset="utf-8"><!--문자의 인코딩 방식 표기-->
+	<body>
+		<h1>이미지태그(p75)</h1>
+			<p> 로스트아크의 사진입니다. </p>
+			<hr size="5" color="blue">
+			<div>
+				<h2>절대경로로 주소지정</h2>
+				<p>최상위폴더(루터)에서부터 위치를 지정해 나아가는 방식</p>
+				<img src="D:\진훈(230503)\01HTML\lostark.jpg" width="300" alt"로스트아크"/>
+				<img src="D:\진훈(230503)\01HTML\이미지\도아가.jpg" width="300" alt"도화가"/>
+				<br/>
+				<img src="D:\진훈(230503)\01HTML\이미지\로콘.jpg" width="150" alt"이모티콘"/>
+				<img src="D:\진훈(230503)\01HTML\이미지\132.jpg" width="200" alt"이모티콘"/>
+				<img alt="로아" width="200" src=https://blogfiles.pstatic.net/MjAyMTA2MjhfODMg/MDAxNjI0ODY1MDU2NjU1.QH-zC7-6zj32JzP440FnyvLx54n4XQib-H0RHcLFy1Eg.DIPSDo4mdGuGFwZxs9HriyMXb_N4lFuQcQwJqq5ky8Ag.JPEG.hanyul1312/Selfie_20210628_%EC%B8%84%EB%A1%9C%EC%8A%A4%EB%83%A0%EB%83%A0_073.jpg/>
+			<hr size="5" color="red">
+			</div>
+			<hr/>
+			<div>
+				<h2>상대경로로 주소지정</h2>
+				<p>현재 작성문서를 기분으로 위치를 지정해 나아가는 방식</p>
+				<img src="lostark.jpg" width="300" alt"로스트아크"/>
+				<img src="로스트아크1.jpg" width="200" alt"도화가"/>
+				<img src="../123.jpg" width="300" alt"로스트아크"/>
+				<!--
+				../ 한수준위폴더 지정
+				../../ 두수준위폴더 지정
+				-->
+				
+			</div>
+	</body>
+</html>
