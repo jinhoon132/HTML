@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>08 표만들기</title>
+	</head>
+	<body>
+		<h1>테이블(표) 만들기(p80)</h1>
+		<p>table태그 : 하나의 표를 만드는 태그</p>
+		<p>tr태그 : 하나의 행을 만드는 태그</p>
+		<p>td태그 : 하나의 칸을 만드는 태그</p>
+		<p>colspan속성 : 지정한 수만큼 열을 기준으로한 칸의 병합</p>
+		<p>rowspan속성 : 지정한 수만큼 행을 기준으로한 칸의 병합</p>
+		<hr/>
+		<div>
+			<h2>테이블 예시</h2>
+			<table border="1" width="600" height="400">
+				<tr>
+					<td>사과</td>
+					<td>딸기</td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					<td colspan="2">배</td>
+					<td></td>
+									
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+					
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<div>
+			<h2>테이블 1번</h2>
+			<table border="1" width="600" height="400">
+				<tr>
+					<td width="200">
+					</td>
+					<td rowspan="3">
+						<table border="1" width="350" height="200">
+							<tr>
+								<td rowspan="2">
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<div>
+			<h2>테이블 2번</h2>
+			<table border="1" width="600" height="400">
+				<tr>
+					<td>
+					</td>
+					<td rowspan="3">
+					</td>
+					<td rowspan="3">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					</td>
+				</tr>
+		
+			</table>
+		</div>
+		<hr/>
+		<div>
+			<h2>테이블 3번</h2>
+			<table border="1" width="600" height="400">
+				<tr>
+					<td width="200">
+					</td>
+					<td rowspan="3">
+						<table border="1" width="150" height="300">
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+					</td>
+					<td width="200">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<div>
+			<h2>테이블 4번</h2>
+			<table border="1" width='600' hetight="400">
+				<tr>
+					<td width="200">
+					</td>
+					<td>
+						<table border="1" width="100" height="50">
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+						<table border="1" width="100" height="50">
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+						</table>
+						<table border="1" width="100" height="50">
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="200">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+	</body>
+</html>

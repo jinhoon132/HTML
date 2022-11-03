@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>10 웹표준에 맞는 표만들기</title>
+	</head>
+	<body>
+		<div>
+			<h2>성적표<h2>
+			<table border="1" width="300" height="200">
+				<caption>1학년 1반 중간고사 성적표</caption><!--표의 제목이나 간략한 설명-->
+				<thead>
+					<tr>
+						<th>이름</th><!--<th> : 제목칸-->
+						<th>국어</th>
+						<th>영어</th>
+						<th>수학</th>
+					</tr>
+				</thead>
+				<tbody><!--<tbody> : 데이터행, 행의 그룹화, 다수의 tbody 사용가능-->
+					<tr>
+						<td>영신</td>
+						<td>100</td>
+						<td>90</td>
+						<td>80</td>
+					</tr>
+					<tr>
+						<td>연희</td>
+						<td>70</td>
+						<td>60</td>
+						<td>40</td>
+					</tr>
+					<tr>
+						<td>지원</td>
+						<td>20</td>
+						<td>5</td>
+						<td>70</td>
+					</tr>
+				
+				</tbody>
+				<tfoot><!--결과행, 생략가능, thead 다음에 배치 할 수 있다.-->
+					<tr>
+						<td>합계</td>
+						<td>190</td>
+						<td>155</td>
+						<td>190</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</body>
+</html>
