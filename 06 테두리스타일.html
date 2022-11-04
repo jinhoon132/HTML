@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>06 테두리스타일</title>
+		<style>
+			.box{
+				width:300px;
+				height:300px;
+				
+				border-width:10px; /*선의 두께*/
+				border-style:solid; /*선의 스타일(p187)*/
+				border-color:#00f; /*선의 색깔*/
+				
+				/*위치별로 분할 작성*/
+				border-top width:30px;
+				border-left-style:dashed;
+				border-right:30px solid #00f;
+				border-bottom-color:#ff0;
+				
+				/*단축속성(축약속성)*/
+				border:10px solid #00f;
+				
+				/* 둥근 모서리 설정(p189)*/
+				border-radius:30px;
+				
+				/*
+					border-radius:값; - 4개의 모서리
+					border-radius:값1(↖, ↘), 값2(↗, ↙);
+					border-radius:값1(↖,), 값2(↗, ↙), 값3(↘);
+					border-radius:값1(↖,), 값2(↗,), 값3(↘), 값4(↙);
+							-시계방향으로
+							
+							[분할속성] - 잘 작성안함.
+							border-top-left-radius:10px;
+							border-top-right-radius:10px;
+							border-bottom-left-radius:10px;
+							border-bottom-right-radius:10px;
+							/*
+								외곽선
+								 - 테두리보다 바깥영역생성
+								 - 크기에 영향으 ㄹ주지않음
+								 - 위치별로 분할 수 없음.(4방향 정체생성)
+							*/
+						outline:10px solid #000;
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">박스</div>
+		
+	</body>
+</html>

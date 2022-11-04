@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05 박스모델</title>
+		<style>
+			div{width:200px; height:100px; border:5px solid #000;
+			padding:30px;}
+			
+			img{width:200px; height:100px;}
+			
+			#this{
+				border:10px solid #f00;
+				background:#ffc;
+				margin-top:-30px; /*위쪽 외부여백*/
+				margin-left:30px; /*왼쪽 외부여백*/
+				margin-right:80px; /*오른쪽 외부여백*/
+				margin-bottom:100px; /*아래쪽 외부여백*/
+				}
+				
+			.box{
+				padding:20px 40px 60px 80px;
+				/*
+					padding값; - 4방향 공통적용
+					padding값1값2; - 값1:위아래, 값2:좌우
+					padding값1값2값3; - 값1:위, 값2:좌우, 값3:아래
+					padding값1값2값3값4; - 값1:위, 값2:우, 값3:아래, 값:좌 시계방향 순서
+				*/
+				margin-top:50px;
+				}
+				#first{
+				background:#cff;
+				width:200px; height:200px;
+				border:10px solid #00f;
+				padding:20px 50px;
+				box-sizing:border-box;
+				/*
+					box-sizing; 영역의 크기조절 기준을 변경
+					content-box;(기본값) content영역이 크기조절됨
+					border-box; border영역까지 크기조절됨
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="first">박스모델</div>
+		<div id="this">박스모델</div>
+		<div class="box"><img src="../123.jpg"></div>
+	</body>
+</html>
