@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>07배경</title>
+	<style>
+		body{
+			background-color:#fcc;/*배경색상*/
+			background-image:url("../123.jpg"); /*배경이미지*/
+			background-repeat:no-repeat; /*배경이미지 반복설정*/
+			/*
+				:repeat; -반복(기본값)
+				:no-repeat; 반복하지않음
+				:repeat-x; 수평반복
+				:repeat-y; 수직반복
+			*/
+			background-position:center center; /*위치: 수평위치 수직위치*/
+			/*
+				수치(px), 비율값(%), top, left, right, bottom, center등의 값을 입력하여 표현
+			*/
+			
+			background-size: 400px auto; /*크기조절: 너비 높이*/
+			/*
+				수치(px), 비율(%)
+				auto; 다른 한쪽값에 맞추어 정비율로 조절됨.
+				cover; 이미지의 비율을 유지한 채 표시영역을 다 채우는 최소한의 크기
+				contain; 이미지의 비율을 유지한 채, 이미지가 모두 표시되는 최대한의 크기
+			*/
+			background-attachment;/*배치방법*/
+			/*
+				scroll;(스크롤) 표시영역에 따라 같이 스크롤됨
+				fixed; 스크롤 되지않고. 화면에 고정됨
+				local; 컨텐츠에 따라 같이 스크롤됨
+			*/
+			
+			/*
+				추가 배경 스타일
+				background-clip;, background-origin
+				해당 스타일은 따로 학습할 것(사용빈도와 중요도 낮음)
+			*/
+			
+			/*
+				단축속성
+				background:[색상] url("주소")[수평위치][수직위치] / [너비][높이][반복여부][배치]
+			*/
+			background:#ffc url("../123.jpg") center top / 400px auto no-repeat fixed;
+		}
+		
+		div{margin:50px; border:10px solid #00f;
+			background:#cff;}
+		#box1{width:80% height:200px;
+			background-image:url(../로스트아크1.jpg);
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+		}
+		
+		#box2{width:30% height:400px;
+			background-image:url(../로스트아크1.jpg);
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:contain;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>08 대상의 구성</title>
+		<style>
+			/*모든태그(요소):"*"*/
+			*{margin:0;}
+			
+			/*복수대상*/
+			h1,h3,h4{font-size:30px; text-decoration:underline;}
+			
+			/*위치적 조견부여(조상-자손)*/
+			#wrap div{border:5px solid #000; margin-bottom:20px}
+			#wrap div p{font-family:"궁서";}
+			
+			/*위치적 조건부여(부모-자식)*/
+			#wrap > p{color:#f00; font-size:20px;}
+			
+			/*다음에 오는 요소(형제)*/
+			h3 + p{color:#f00; font-size:20px;}
+			
+			/*뒤에오는(밑에있는) 모든 형제*/
+			h4 ~ p{color:#0f0; font-style:italic;}
+			
+			/*정밀하게 선택하는 하나의 대상*/
+			h1#this.abc.def{color:#0ff; background:#fcc; padding:10px;}
+			
+		</style>
+	</head>
+	<body>
+		<h1 id="this" class="abc def" >대상의 구성(p172)</h1>
+		<div id="wrap">
+			<p>:CSS에서 셀렉터를 조합하여 대상을 구성하는 다양한 방식</p>
+			<div id="m1">
+				<h3>영역의 제목</h3>
+				<p>내용 - 단락태그</p>
+				<p>내용 - 단락태그</p>
+				<p>내용 - 단락태그</p>
+			</div>
+			<div id="m2">
+				<p>내용 - 단락태그</p>
+				<h4>영역의 제목</h4>
+				<p>내용 - 단락태그</p>
+				<p>내용 - 단락태그</p>
+		</div>
+	</body>
+</html>
