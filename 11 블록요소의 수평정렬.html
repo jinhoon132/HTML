@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11 블록요소의 수평정렬</title>
+		<style>
+			div{border:5px solid #f00;}
+			p{width:100px; height:100px;
+				border:2px solid #000;
+				background:#ccc; margin:0;
+				font-size:30px; font-weight:bold;
+				text-transform:uppercase;}
+				
+			#box1{text-align:right;}
+			#box1 p{display:inline;}
+			
+			#box2{text-align:center;}
+			#box2 p{display:inline-block;}
+			
+			/*#box3 p{float:left;}*/
+			
+			#box
+			
+			.i{float:left; margin:20px;}
+			.j{float:left;}
+			.k{float:left;}
+			.l{float:left;}
+			
+			.m{width:150px; height:150px;
+				background:#ccf; clear:both;}
+			
+		</style>
+	</head>
+	<body>
+		<h1>블록요소 수평정렬</h1>
+		<hr/>
+		<div id="box1">
+			<p>a</p><p>b</p><br/>
+			<p>c</p>
+			<p>d</p>
+		</div>
+		<hr/>
+		<div id="box2">
+			<p style="background:#fcc;">e</p><p>f</p><br/>
+			<p>g</p>
+			<p style="background:#ffc;">h</p>
+		</div>
+		<hr/>
+		<div id="box3">
+			<p class="i" style="background:#fcc;">i</p>
+			<p class="j">j</p>
+			<p class="k">k</p>
+			<p class="l" style="background:#ffc;">l</p>
+			
+			<p class="m">m</p>
+		</div>
+		<hr/>
+	</body>
+</html>
