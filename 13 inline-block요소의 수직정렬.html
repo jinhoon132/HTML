@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>13 inline-block요소의 수직정렬</title>
+		<style>
+			.box1{border:10px solid #000;}
+			
+			.box1 div{
+				border:1px solid #f00;
+				display:inline-block;
+				vertical-align:top;
+			}
+			
+			.box1 .first{
+				width:500px; height:280px;
+				background:#fcc;
+			}
+			
+			.box1 .first ~ div{/*~은 first 다음에 오는 div들을 지목하는것임*/
+				background:#ffc;
+				width:150px; height:80px;
+			}
+			
+			.box2{
+				border:10px solid #00f;
+				font-size:100px;
+			}
+			img{
+				
+				vertical-align:text-top;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="first">상자</div>
+			<div>상자<br/>상자</div>
+			<div style="font-size:30px;">상자</div>
+			<div>상자</div>
+		</div>
+		<div class="box2">
+			text<img src="../123.jpg">jpg
+		</div>
+		<!--
+			모든 inline요소들의 baseline을 기준으로 수평정렬된다.
+			baseline:텍스트가 나열되는 라인
+			vertical-align속성 : inline-block요소의 수직위치를 조정
+			:baseline; (기본값) 텍스트가 나열되는 수평라인에 맞추어 정렬됨.
+			:top; 행높이를 기준하여 위에 정렬됨
+			:bottom; 행높이를 기준하여 아래에 정렬됨
+			:middle; 가운데 정렬됨
+			:text-top; 텍스트크기를 기준으로 위에 정렬됨
+			:text-bottom; 텍스트크기를 기준으로 아래에 정렬됨
+			:sub; 아래첨자 위치에 표시
+			:super; 윗첨자 위치에 표시
+			:수치px;
+		-->
+	</body>
+</html>

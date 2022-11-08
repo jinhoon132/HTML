@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>과제3</title>
+		<style>
+			#parent{
+				width:800px; 
+				height:370px;
+				border:10px solid #f00; 
+				background:#ffc;
+				
+			}
+			
+			div>div{
+				width:100px; height:100px;
+				
+			}
+			.ab{
+				width:300px; height:300px;
+				border:3px solid black;
+				
+			}
+			.bc{
+				float:left;
+				background-color:green;
+				margin-top:30px;
+				margin-left:30px;
+			}
+			.ac{
+				float:right;
+				background-color:red;
+				margin-right:30px;
+				margin-top:30px;
+			}
+			.qw{float:left;}
+			.qr{float:right;}
+			.qe{clear:both;}
+			#a{background:#0f0;}
+			#b{background:#00f;}
+			#c{background:#ff0;}
+			#d{background:#0ff;}
+			#e{background:#fff;}
+			#f{background:#0f0;}
+			#g{background:#ff0;}
+			#h{background:#0f0;}
+			#i{background:#0ff;}
+			#j{background:#00f;}
+			
+		</style>
+	
+	<body>
+		<div id="parent">
+		
+		<div class="ab bc" id="parent1">
+			<div class="qw" id="a">A</div>
+			<div class="qw" id="b">B</div>
+			<div class="qw" id="c">C</div>
+			<div class="qw qe" id="d">D</div>
+			<div class="qw qe" id="e">E</div>
+		</div>
+		
+		<div class="ab ac" id="parent2">
+			<div class="qr" id="f">F</div>
+			<div class="qr qe" id="g">G</div>
+			<div class="qr qe" id="h">H</div>
+			<div class="qr" id="i">I</div>
+			<div class="qr" id="j">J</div>
+		</div>
+		
+		</div>
+	</body>
+</html>

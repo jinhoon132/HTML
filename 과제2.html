@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>과제2</title>
+		<style>
+			#parent{
+				width:500px; height:500px;
+				border:10px solid #f00; background:#ffc;
+				background-size:500px 500px;
+				background-image:url("../123.jpg");
+				
+			}
+			
+			#parent div{
+				width:100px; height:100px;
+				
+			}
+			
+			#a{background:#0f0;}
+			#b{background:#00f;}
+			#c{background:#ff0;}
+			#d{background:#0ff;}
+			#e{background:#fff;}
+			#f{background:#0f0;}
+			#g{background:#ff0;}
+			#h{background:#0f0;}
+			#i{background:#0ff;}
+			#j{background:#00f;}
+			#k{background:#0ff;}
+			#l{background:#0f0;}
+			.ab{float:left;}
+			.ac{float:right;}
+			.bc{clear:both;}
+		
+		</style>
+	
+	<body>
+		<div id="parent">
+			<div class="ab" id="a">A</div>
+			<div class="ab" id="b">B</div>
+			<div class="ab" id="c">C</div>
+			<div class="ab bc" id="d">D</div>
+			<div class="ab" id="e">E</div>
+			<div class="ab bc" id="f">F</div>
+			<div class="ac" id="g">G</div>
+			<div class="ac bc" id="h">H</div>
+			<div class="ac" id="i">I</div>
+			<div class="ac bc" id="j">J</div>
+			<div class="ac" id="k">K</div>
+			<div class="ac" id="l">L</div>
+		</div>
+	</body>
+</html>
