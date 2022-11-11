@@ -1,100 +1,98 @@
 <!DOCTYPE html>
-<html lang="ko"><!--콘텐츠의 작성언어 표시-->
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--익스플로어로 접근했을 때, 최신버전의 문서모드를 사용할 것-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--모바일과 같은 다른 디바이스에 접근할 경우, 적용되는 항목-->
-    <title>Document</title>
-    <link href="style1.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>전주비빔밥축제</title>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!--상단영역-->
-    <div id="header">
-        <div class="top">
-            <div id="sns_menu">
-                <ul>
-                    <li><img src="images/sns01.jpg" alt="페이스북"/></li>
-                    <li><img src="images/sns02.jpg" alt="인스타그램"/></li>
-                    <li><img src="images/sns03.jpg" alt="블로그"/></li>
-                    <li><img src="images/sns04.jpg" alt="유튜브"/></li>
-                </ul>
-            
-        </div><!--end:#sns_menu-->
-            <div id="lang_menu">
-                <ul>
-                    <li><img src="images/login.jpg" alt="로그인"></li>
-                    <li><img src="images/english.jpg" alt="ENGLISH"></li>
-                </ul>
-            </div><!--end:#lang_menu-->
-        </div><!--end:.top-->
-        <div id="logo">
-            <h1><img src="images/logo.jpg" alt="카페쇼"></h1>
-        </div><!--end:#logo-->
-        <div id="banner">
-            <p><img src="images/banner.jpg" alt="배너이미지"></p>
-        </div><!--end:#banner-->
-        <div id="main_menu">
-            <ul>
-                <li><img src="images/menu01.jpg" alt="서울카페쇼"></li>
-                <li><img src="images/menu02.jpg" alt="주요행사"></li>
-                <li><img src="images/menu03.jpg" alt="참가업체"></li>
-                <li><img src="images/menu04.jpg" alt="참관객"></li>
-                <li><img src="images/menu05.jpg" alt="파트너스"></li>
-                <li><img src="images/menu06.jpg" alt="미디어 센터"></li>
-            </ul>
-        </div><!--end:#main_menu-->
-    </div><!--end:#header-->
+	<header>
+		<div class="top">
+			<div id="home">
+			<p><img src="images/home.jpg" alt="첫 페이지로"/></p>
+			</div><!--e:#home-->
+			<div id="sns">
+			<ul>
+				<li><img src="images/sns1.jpg" alt="인스타그램" title="인스타그램"></li>
+				<li><img src="images/sns2.jpg" alt="페이스북" title="페이스북"></li>
+				<li><img src="images/sns3.jpg" alt="블로그" title="블로그"></li>
+			</ul>
+			</div><!--e:#sns-->
+			<div id="language">
+			<ul>
+				<li><img src="images/top01.jpg" alt="한국어로 변경"></li>
+				<li><img src="images/top02.jpg" alt="영어로 변경"></li>
+				<li><img src="images/top03.jpg" alt="중국어로 변경"></li>
+				<li><img src="images/top04.jpg" alt="일본어로 변경"></li>
+			</ul>
+			</div><!--e:#language-->
+		</div><!--e:.top-->
+		<div id="logo">
+			<h1><img src="images/logo.jpg" alt="전주비빔밥축제"/></h1>
+		</div><!--e:#logo-->
+		<nav id="gnb"><!--Global Navigatio Bar-->
+			<ul>
+				<li><img src="images/main_menu01.jpg" alt="전주비빔밥축제" onmouseover="this.src='images/main_menu01_o.jpg'" onmouseout="this.src='images/main_menu01.jpg'"/></li>
+				<li><img src="images/main_menu02.jpg" alt="대표프로그램" onmouseover="this.src='images/main_menu02_o.jpg'" onmouseout="this.src='images/main_menu02.jpg'"/></li>
+				<li><img src="images/main_menu03.jpg" alt="체험프로그램" onmouseover="this.src='images/main_menu03_o.jpg'" onmouseout="this.src='images/main_menu03.jpg'"/></li>
+				<li><img src="images/main_menu04.jpg" alt="외식,경연" onmouseover="this.src='images/main_menu04_o.jpg'" onmouseout="this.src='images/main_menu04.jpg'"/></li>
+				<li><img src="images/main_menu05.jpg" alt="부대행사" onmouseover="this.src='images/main_menu05_o.jpg'" onmouseout="this.src='images/main_menu05.jpg'"/></li>
+				<li><img src="images/main_menu06.jpg" alt="공지사항" onmouseover="this.src='images/main_menu06_o.jpg'" onmouseout="this.src='images/main_menu06.jpg'"/></li>
+			</ul>
+		</nav><!--e:#gnb-->
+	</header>
+	
+	<main>
+		<section id="main_view">
+			<p><img src="images/main_view.jpg" alt="전주비빔밥축제 10.26(목)~10.29(일) 한국전통문화전당"></p>
+		</section><!--e:#main_view-->
+		<section id="program1">
+			<p><img src="images/program01.jpg" alt="이미지간략설명"></p>
+		</section><!--e:#program1-->
+		<section id="movie">
+			<p><iframe width="330" height="300" src="https://www.youtube.com/embed/QJl7l4zHq3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></p>
+		</section><!--e:#movie-->
+		<section id="program2">
+			<p><img src="images/program02.jpg" alt="이미지간략설명"></p>
+		</section><!--e:#program2-->
+		<section id="notice">
+			<h3>공지사항<img src="images/notice.jpg" alt="더보기"></h3>
+			<p><iframe src="notice.html"></iframe></p>
+		</section><!--e:#notice-->
+		<section id="link">
+			<ul>
+				<li>일정안내 <a>바로가기</a></li>
+				<li>행사장 배치도 <a>바로가기</a></li>
+				<li>오시는 길 <a>바로가기</a></li>
+			</ul>
+		</section><!--e:#link-->
+		<section id="program3">
+			<p><img src="images/program03.jpg" alt="이미지간략설명"></p>
+		</section><!--e:#program3-->
+		<section id="program4">
+			<p><img src="images/program04.jpg" alt="이미지간략설명"></p>
+		</section><!--e:#program4-->
+		<section id="brochure">
+			<p><img src="images/brochure.jpg" alt="이미지간략설명"></p>
+		</section><!--e:#brochure-->
+	</main>
 
-    <!--중단영역-->
-    <div id="main">
-        <div id="main_view">
-            <p><img src="images/main_veiw.jpg" alt="메인뷰이미지"/></p>
-        </div><!--end:main_view-->
-        <div id="notice">
-            <h3><img src="images/notice_t.jpg" alt="공지사항"/></h3>
-            <p><img src="images/notice.jpg" alt="공지사항내용"/></p>
-        </div><!--end:notice-->
-        <div id="movie">
-            <h3><img src="images/movie_t.jpg" alt="홍보동영상"/></h3>    
-            <p><iframe width="464" height="263" src="https://www.youtube.com/embed/kupvb9YOnVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-        </div><!--end:movie-->
-        <div id="tel">
-            <p><img src="images/tel.jpg" alt="사무국안내 참가업체문의:02-50..."/></p>
-        </div><!--end:tel-->
-        <div id="event_list">
-            <h3>주요행사</h3>
-            <ul>
-                <li><img src="images/event_img_01.jpg" alt=""/>경연대회</li>
-                <li><img src="images/event_img_03.jpg" alt=""/>체험/특별행사</li>
-                <li><img src="images/event_img_02.jpg" alt=""/>세미나</li>
-                <li><img src="images/event_img_05.jpg" alt=""/>월드커피리더스포럼</li>
-                <li><img src="images/event_img_04.jpg" alt=""/>WBC 2017</li>
-            </ul>
-        </div><!--end:#event_list-->
-        <div id="forum">
-            <h3><img src="images/forum_t.jpg" alt="동시개최행사"/></h3>
-            <p><img src="images/forum.jpg" alt="월드커피리더스포럼"/></p>
-        </div><!--end:forum-->
-        <div id="ads">
-            <h3><img src="images/ads_t.jpg" alt="광고"/></h3>
-            <p><img src="images/ads.jpg" alt="엔조이카페 모집 배너"/></p>
-        </div><!--end:ads-->
-        <div id="host_list">
-            <h3><img src="images/ep_t.jpg" alt="참가업체 소개"></h3>
-            <ul>
-                <li><img src="images/ep01.jpg" alt=""></li>
-                <li><img src="images/ep02.jpg" alt=""></li>
-                <li><img src="images/ep03.jpg" alt=""></li>
-                <li><img src="images/ep04.jpg" alt=""></li>
-            </ul>
-        </div><!--end:host_list-->
-    </div><!--end:#main-->
-
-    <!--하단영역-->
-    <div id="footer">
-        하단
-    </div><!--end:#footer-->
+	<footer>
+		<div id="host">
+			<p><img src="images/host01.jpg" alt="주최주관"></p>
+			<p><img src="images/host02.jpg" alt="협찬"></p>
+			<p><img src="images/host03.jpg" alt="후원"></p>
+		</div><!--e:#host-->
+		<address>
+			<p>전주비빔밥축제조직위원회 Tel : 063-231-8969
+				Fax : 063-278-0093</p>
+			<p>전주시 완산구 현무1길 20 한국전통문화전당 2층</p>
+			<p>Copyright &copy; Jeonju Bibimbap Fastival
+				Organizing Committee. All rights reserved.
+				e-mail : bibimbapfast@navaer.com</p>
+		</address>
+	</footer>
 </body>
 </html>

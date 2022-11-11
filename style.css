@@ -7,17 +7,16 @@ image{vertical-align: top;}
 /*header스타일*/
 header{width:1140px; height:139px; margin:0 auto;}
 
-header .top{height:38px; border-top:0; border-bottom:1px solid #e4e4e4;}
+header .top{height:38px; border:1px solid #e4e4e4; border-top:0;}
 header .top > div{padding:6px 0;}
     #home{float:left; margin-bottom:30px;}
-    #sns{float:left; padding-left:10px; padding-right:6px;
-        border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4;}
+    #sns{float:left; padding:6px 10px; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4;}
     #sns li{display:inline-block;}
     #language{float:right; font-size: 0;
         border-left:1px solid #e4e4e4;}
-    #logo {float:left; padding:30px 0; margin-right:70px;}
     #language li{display:inline-block;}
-    #gnb{float:right; font-size:0; padding:22px 0;}
+    #logo{float:left; padding:22px 0; margin-right:70px;}
+header #gnb{float:right; font-size:0; padding:22px 0;}
     #gnb li{display:inline-block;}
 
 main{width:1140px; height:1186px; margin:0 auto;}
@@ -37,6 +36,9 @@ footer{width:1140px; height:350px; margin:0 auto; background:#262b36;}
 footer address{width:850px; margin:20px 0 0 70px;
     font-family:"맑은 고딕"; font-size:13px; color:#888;
     font-style:normal; line-height:34px;}
+footer address p.first-child{white-space:pre;}
+footer address p:nth-child(2){border-top:1px solid #464b54;}
+footer address p:last-child{font-size:11px; color:#5d5d5d;}
 
 
 /*공지사항 페이지*/
