@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style: none;}
+image, iframe{vertical-align: top;}
+
+body{font-family:'Noto Sans KR',"Malgun Gothic","맑은 고딕", sans-serif;}
+
+header{width:1200px; margin:0 auto; border: 1px solid rgb(255, 255, 255);}
+    .top{width:1200px; height:50px; border-bottom:1px solid rgb(175, 175, 175);}
+    #logo{float: left;}
+    #logo2{float: left; margin-left: 70px;}
+    #logo3{float: right;}
+    #logo3 li{display:inline-block;}
+
+    #data{width: 1200px;}
+    #data{float: left; margin-top: 20px;}
+    #data h2{float: left;}
+    #data #main2{float: left; margin-left: 180px;}
+    #data #main2 li{display: inline-block;}
+    #data #main3{float: right;}
+    #data #main3 li{display: inline-block;}
+
+main{width:1200px; margin: 0 auto;}
+    #search{width:1200px; height: 620px; margin-top: 90px;
+        background:url("images/bg.png") center/cover no-repeat; }
+    #search1 h1{font-size:35px; font-weight:bold; color:#fff; padding-top: 50px; padding-bottom: 50px;}
+    #search1{float:left;}
+    #search p{font-size:16px; color:#c5dbff;}
+    #search2 {float: right; margin-bottom: 45px;}
+    #search2 p{padding-top:60px; margin-bottom: 30px;}
+    
+    #search2 dl{float: left; text-align:center; width:160px;}
+    #search2 dl:nth-child(3){width:188px; border-left:1px dashed #c5dbff;
+            border-right:1px dashed #c5dbff;}
+    #search2 dt{font-size: 16px; color:#c5dbff;}
+    #search2 dd{font-size: 34px; color:#fff; font-family:"Roboto";
+        font-weight:bold; letter-spacing:-1px;}
+
+    #icon{float: left;}
+    #banner{float: right;}
+
+    #board{width:1200px; margin: 0 auto; margin-top: 50px;}
+    #board #board1{float: left;}
+    #board #board2{float: right;}
+
+    #data_banner{width:1200px; height: 500px; margin-top: 320px;
+        background:#e3eaf4;}
+    #data_banner p{display:inline-block; margin-top: 70px;}
+    #data_banner p img{width:290px; padding-left:3px;}
+    #hadan{height:400px; margin-top:50px;}
+    #hadan ~ div{width:80%;}
+    #hadan #notice{float: left;}
+    #hadan #etc1{float: left; margin-left:25px;}
+    #hadan #etc2 p{float: right;}
+    
+footer{width: 1200px; margin: 0 auto; margin-top:-80px;}
+    #btmjump{background-color:#000; border:2px solid #000;}
+    #btmjump #btm{float:left; margin-left: 180px;}
+    #btmjump #btm li{display:inline-block;}
+    
+    #btmjump #jump{float: right;}
