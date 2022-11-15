@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style: none;}
+image, iframe{vertical-align: top;}
+
+body{font-family:'Noto Sans KR',"Malgun Gothic","맑은 고딕", sans-serif;}
+
+header{width:1903px; height:123px; margin:0 auto;}
+    #top{margin:0 401px;}
+    #top_menu{float:right;}
+    #top_menu li{display:inline-block;}
+    #top_menu a{margin-left: 40px;}
+    #top_menu li img{margin-left: 20px; margin-top: 15px; margin-right:15px;}
+    #logo{float:left; margin-right: 180px; margin-top: 20px;}
+    #top2_menu{float:right; margin-top: 30px;}
+    #top2_menu a{margin-left: 40px;}
+    #top2_menu li{display:inline-block;}
