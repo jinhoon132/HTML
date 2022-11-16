@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 트랜지션</title>
+    <style>
+        #this{
+            width: 100px; height:100px;
+            background:red;
+
+            transition-property: all; /*전환속성(all:모든속성)*/
+            transition-duration: 2s; /*전환시간*/
+            transition-timing-function:steps(4,end); /*전환속도*/
+            /*
+                [참고] arof03.cafe24.com/속도비교.html
+                ease; (기본값) 처음과 끝이 느리고, 중간이 빠름
+                linear; 처음부터 끝까지 같은 속도
+                ease-in; 처음에는 느리고, 뒤에서는 속도가 빨라짐
+                ease-out; 처음에는 빠르고, 뒤에서는 속도가 느려짐
+                ease-in-out; 처음과 끝이 느리고, 중간이 빠름(변폭이 크다.)
+                steps; 단계별로 나누어서 동작함.
+            */
+            transition-delay: 1s;
+            /*
+                단축(축약)
+                transition:전환속성 전환시간 [속도] [대기시간];*/
+            transition:all 5s ease 1s;
+        }
+        #this:hover{
+            width:200px; height: 200px;
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>트랜지션(=전환) 효과</h2>
+    <p>: CSS 동적표현 효과 중 하나로, 기존 스타일에서 다른 스타일로 부드럽게 변화시키는 효과</p>
+    <div id="this"></div>
+    
+</body>
+</html>

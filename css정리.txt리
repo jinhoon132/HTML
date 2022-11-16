@@ -101,3 +101,9 @@
 	- 에릭마이어의 사이트 : http://meyerweb.com/
 	- 리셋코드 오픈소스 다운받기
 		[Toolbox]-[CSS]-[Reset CSS]-[a copy of the file]
+		
+■ 각도의 단위
+	(1) deg : 육십분법(360deg=1회전) ★
+	(2) drad : 그레이드법(400grad = 1회전)
+	(3) rad : 호도법(2π rad = 1회전)
+	(4) turn : 회전(1turn = 1회전)
