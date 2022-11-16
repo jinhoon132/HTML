@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 float영역 인식하기 2번째</title>
+    <style>
+		.parent{border:10px solid #000; background:#ccc}
+		.child{width:100px; height:100px; float:left;}
+		.child:nth-child(1){background:#f00;}
+		.child:nth-child(2){background:#ff0;}
+		.child:nth-child(3){background:#0ff;}
+		
+		hr{clear:both;}
+		
+		.no1{overflow:hidden;}
+		
+		.box{height10px; background:#0f0; clear:both;}
+		
+		.no3::before{content:"비포"; background:ccf;}
+		/*.no3::after{content:"에프터"; background:#cfc;}*/
+		
+		.no3::after{content:""; display:block; clear:both;}
+	</style>
+</head>
+<body>
+	<h3>(3)부모에게 overflow:hidden;을 설정한다</h3>
+	<div class="parent no1">
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	</div>
+	<hr/>
+	<h3>(4)float를 인식하는 마지막 자식요소(block)를 추가한다.</h3>
+	<div class="parent no2">
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="box"></div>
+	</div>
+	<hr/>
+	<h3>[주로사용되는 방법]</h3>
+	<p>스타일에 다음과 같이 선언 후,</p>
+	<p>.clearfix::after{content:''; dispaly:block; clear:both;</p>
+	<p>float를 감싸는 부모영역에게 클래스(clearfix)를 부여한다.</p>
+	<div class="parent no3">
+	<!--비포영역이 생기는 부분-->
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<!--에프터영역이 생기는 부분-->
+	</div>
+	
+</body>
+
+</html>

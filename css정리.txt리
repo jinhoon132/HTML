@@ -52,7 +52,7 @@
 		(2) 기본크기 : 너비는 부모와 같고, 높이는 내용만큼 설정된다.
 		(3) 크기조절이 가능하다.
  	
-	2. inline태그 : 텍스트나 내용을 감싸는 태그
+	2. inline태그 : 텍스트나 내용을 감싸는 태그 = 텍스트와 같은 취급
 		- span, a, strong, em. i, (b, small, del, ins, sup, sub, mark)
 		(1) 수평정렬
 		(2) 기본크기 : 너비는 내용만큼, 높이는 글자크기(font-size)만큼 설정된다.
@@ -84,7 +84,20 @@
 			case 1) float요소 다음에 block요소가 오는 경우
 				:clear속성을 사용하여, 선행되는 float효과를 지운다.
 			case 2) float요소를 감싸는 부모요소의 경우
-				:
+				ⓐ 부모요소에게도 float를 설정한다.(추천하지 않음)
+				ⓑ 필요한 만큼의 높이값을 강제적으로 부여한다.(하수, 유동적이지 않음)
+				ⓒ overflow:hidden;을 설정한다. -!높이를 고정하면 안됨!
+				ⓓ float를 인식하는 마지막 자식요소(block)를 추가한다.
+				.clearfix::after{content:""; display:block; clear:both;}
 			※ clear:both;(left; right;)
 				:선행되는 float효과를 지운다.
 				(이전 요소와 같이 수평정렬이 되지않음 - 줄바꿈)
+				
+■ 리셋코드
+	:태그는 각자의 스타일을 기본값으로 가지고 있다.
+	이를, 스타일링을 편하게 하기위해, 기본값은 0 또는 none으로 설정하거나, 
+	자주사용되는 공통된 값으로 설정하는 것을 말함.
+	-'에릭마이어'가 고안을 함
+	- 에릭마이어의 사이트 : http://meyerweb.com/
+	- 리셋코드 오픈소스 다운받기
+		[Toolbox]-[CSS]-[Reset CSS]-[a copy of the file]

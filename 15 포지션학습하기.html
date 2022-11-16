@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 포지션 학습하기</title>
+    <style>
+        *{margin:0; padding:0;}
+    body{width: 2000px; height:3000px;}
+    div{width:200px; height: 100px;
+            border:1px solid #000;
+            background:#999;
+            color:#fff; font-size: 30px;}
+    #item2{background: #f00; position: fixed; top:30px; left:40px;}
+
+    #item4{background:#0f0; position:absolute;
+        top:60px; left:100px; z-index:3;}
+
+    #item6{background: #00f; position: absolute;
+        top:90px; left:150px;}
+        
+    #item8{background: #ff0; position: relative;
+        top:30px; left:50px;}
+    
+    #item10{background:#0ff; position:sticky; top:30px; left:50px;}
+    </style>
+</head>
+
+<body>
+    <div id="item1">item1</div>
+    <div id="item2">item2<br/>(fixed)</div>
+    <div id="item3">item3</div>
+    <div id="item4">item4<br/>(absolute)</div>
+    <div id="item5">item5</div>
+    <div id="item6">item6<br/>(absolute)</div>
+    <div id="item7">item7</div>
+    <div id="item8">item8<br/>(relative)</div>
+    <div id="item9">item9</div>
+    <div id="item10">item10<br/>(sticky)</div>
+    
+</body>
+</html>
