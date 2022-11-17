@@ -15,6 +15,8 @@ a:hover{text-decoration:underline;}
 .inner{width: 1100px; height: 100%; margin: 0 auto;
     position: relative;}
 
+.clearfix::after{content:''; display:block; clear:both;}
+
 header{height:120px; background:#f6f5ef; margin: 0 auto;
     border-top:2px solid #000; border-bottom: 1px solid #e5e5e5;}
     #logo{position:absolute; top:22px; left:0;}
@@ -71,3 +73,116 @@ main_visual .inner{outline:2px solid #f00;}
 
 #notice{height: 62px; background-color:#111; 
     background-image:linear-gradient(90deg,#111 50%,#f5f4ef 50%);}
+#notice .left{float:left; width:640px; height:62px;
+    background: #111;}
+#notice .left h3{float: left; margin-top: 21px;}
+#notice .left ul{float: left; font-size:14px; line-height:24px;
+    padding-left: 15px; color:#fff; margin-top: 19px;}
+#notice .left p{float: right; margin:14px 20px 0 0;}
+#notice .left p img{width:35px;}
+
+#notice .right{float: right; width:460px;}
+#notice .right h3{width:234px; padding:13px 0 0 200px;}
+#notice .right h3 a{width:100%;}
+#notice .right h3 a span{display:inline-block; width:129px; height:36px; 
+    text-indent:-999px; overflow:hidden; 
+    background:url("../images/prom_ttl_b.png") center/100% auto no-repeat;}
+#notice .right h3 img{float:right;}
+
+#rewards{background:#1e3932; padding:30px 0 40px;}
+#rewards .inner{width:1080px;}
+#rewards #rewards_logo{float:left; width:16.3%; margin:0 40px;}
+#rewards #rewards_logo img{width:176px;}
+#rewards #rewards_conts{float:left; width:calc(83.7% - 110px); padding-right:30px;
+    color: #fff; letter-spacing:.5px; line-height:1.4;}
+#rewards #rewards_conts .info{padding-bottom: 12px; margin-bottom: 22px;
+    border-bottom:1px solid #4b615b; position: relative;}
+#rewards #rewards_conts .info h3{font-size:26px; margin-bottom:12px;} 
+#rewards #rewards_conts .info p{font-size:17px;}
+#rewards #rewards_conts .gift{position:relative;}
+#rewards #rewards_conts .gift p{font-size:14px;}
+#rewards #rewards_conts strong, #rewards #rewards_conts .gift em{font-weight:bold;}
+#rewards #rewards_conts .member{position:absolute; right:0; bottom:20px;}
+#rewards #rewards_conts .member li{float:left;}
+#rewards #rewards_conts .e_btn{position:absolute; top:0; right:0;}
+#rewards #rewards_conts .member a{height:36px; line-height:36px;
+    padding:0 18.5px; margin-left:9px; font-size:14px; border:2px solid #fff; border-radius:5px;}
+#rewards #rewards_conts .member li:first-child a{background: #00704a; border-color:#00704a;}
+#rewards #rewards_conts .member a,
+#rewards #rewards_conts .e_btn a{height:36px; line-height:36px;
+    padding:0 18.5px; margin-left:9px; font-size:14px; border:2px solid #fff; border-radius:5px;} 
+#rewards #rewards_conts .e_btn a{width:142px; text-align: center;}
+
+#bean{height: 572px; 
+    background:
+    url("../images/bean_bg_left.png") 0 -100px no-repeat,
+    url("../images/bean_bg_right.png") right 300px no-repeat,
+    url("../images/bean_bg.jpg") center/cover no-repeat;}
+#bean .bean_img{position:absolute; top:13.6%; left:13.8%;}
+#bean .bean_text{position:absolute; top:31.9%; left:50.8%;}
+#bean .bean_text p:last-child{margin-top:39px;}
+#bean .bean_text .btn{color:#1e245c; border-color:#1e245c;}
+#bean .bean_text .btn:hover{background: #1e245c; color:#fff;}
+
+#reserve{height: 400px;
+    background: 
+    url("../images/indonesia_leaf1.png") left bottom no-repeat,
+    url("../images/indonesia_leaf2.png") right bottom no-repeat,
+    url("../images/indonesia_visual3.png") center no-repeat,
+    url("../images/indonesia_visual_bg.jpg") center/cover;    
+}
+#reserve h3{padding-top: 115px;}
+#reserve p{margin: 39px 0 0 264px;}
+#reserve .btn{color:#b9813e; border-color:#b9813e;}
+#reserve .btn:hover{background: #b9813e; color:#fff;}
+
+#favorite{height:800px; background: #45434c url("../images/fav_prod_bg_new.jpg") center/cover no-repeat fixed;}
+#favorite p{position: absolute;}
+#favorite .txt1{top:100px; left:100px;}
+#favorite .txt2{top:350px; left:0;}
+#favorite .img{top:120px; right:0;}
+#favorite .btn{color:#fff; border-color:#fff;}
+#favorite .fav_btn{bottom:200px; left:230px;}
+#favorite .fav_btn:hover{background:#000; color:#fff;}
+
+#magazine{height: 400px;
+    background: url("../images/reserve_bg_pc.png") center bottom no-repeat;}
+#magazine h3{padding: 135px 0 0 44px;}
+#magazine .visual{position: absolute; top:0; right:67px;}
+#magazine .mag_btn{margin: 33px 0 0 344px;}
+#magazine .btn{color:#000; border-color:#000;}
+#magazine .btn:hover{background: #000; color:#fff;}
+
+#store{height:400px; background: url("../images/store_bg.jpg"); overflow:hidden;
+    background-size:100% auto;}
+#store p{position: absolute;}
+#store .img1{top:149px; left:300px;}
+#store .img2{top:0; left:70px;}
+#store .img3{top:-60px; left:430px;}
+#store .img4{bottom:0; right:-60px;}
+#store .txt1{top:100px; left:656px;}
+#store .txt2{top:168px; left:656px;}
+#store .sto_btn{top:258px; left:662px;}
+#store .btn{color:#222; border-color:#222;}
+#store .btn:hover{background: #222; color:#fff;}
+
+footer{padding:32px 0 35px 0;
+    position: relative; background: #2c2a29;}
+#footer_menu{width:1182px; margin:0 auto; color:#fff;
+    background:url("../images/footer_logo.png") right 8px no-repeat;}
+#footer_menu ul{display: inline-block; width: 220px; vertical-align:top;}
+#footer_menu ul li{font-size: 12px; line-height: 24px; color: #fff;}
+#footer_menu .en{font-size: 14px; line-height:40px; font-weight: bold;}
+#footer_menu li:hover{cursor:pointer; text-decoration:underline;}
+
+footer .awards{height: 80px; margin-top: 40px; padding-top: 20px;
+    background: #282828; font-size: 0; text-align:center;}
+footer .awards li{display:inline-block;}
+footer .info{font-size: 12px; color:#999; text-align: center;
+    padding-top:30px; line-height: 18px;}
+footer .rules li{display: inline-block; padding:0 10px; border-left: 1px solid #393939;}
+footer .rules li:first-child{border:0; color:#00b050; text-decoration:underline;}
+footer .link li{margin:10px 2px 0 3px; display:inline-block;}
+footer .link li a{width:90px; height:30px; line-height:30px;}
+footer .address{padding:25px 0 5px; white-space:pre-wrap;}
+footer p{line-height:40px;}
