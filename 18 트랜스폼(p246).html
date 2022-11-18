@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 트랜스폼(p246)</title>
+    <style>
+        div[id^="box"]{width: 300px; height: 300px; margin: 50px;
+            border:10px solid #000;}
+        .this{width: 120px; height: 60px; font-size: 20px;
+        font-weight:bold; color:#fff; background: #f00;
+        text-align:center; line-height:60px; margin: 0; transition:all .5s;}
+
+        #box1:hover .this{transform:translate(100px, 150px);}
+        /*
+            [위치이동]
+            :translate(수평위치, 수직위치);
+            :translateX(값) - 수평이동
+            :translateY(값) - 수직이동
+            ※ 비율값(%)을 입력시, 부모의 크기를 기준하지 않고, 자기자신의 크기를 기준한다.
+        */
+
+        #box2:hover .this{transform:scale(2,0.5);}
+        /*
+            [크기조절]
+            :scale(너비비,높이비);
+            :scaleX(값); - 너비크기조절
+            :scaleY(값); - 높이크기조절
+        */
+
+        #box3:hover .this{transform:rotate(90deg);}
+        /*
+            [회전]
+            :rotate(각도); 
+        */
+
+        #box4:hover .this{transform:skew(40deg);}
+        /*
+            [기울리기]
+            :skew(각도1,각도2); - 각도1:수평축 기울리기 - 각도2:수직축 기울리기
+            :skewX(각도); - 수평축 기울리기
+            :skewY(각도); - 수직축 기울리기
+        */
+
+        #box5:hover .this{transform:rotate(90deg) scaleX(2);}
+        /*
+            - 속성값을 여러개 설정하여, 다중변형을 시킬 수 있다.
+            - 속성값을 작성 순서에 따라, 변형의 적용순서가 정해진다.
+            - 뒤에서부터 변형이 먼저 적용된다.
+        */
+
+        #box6 .this{transform-origin:left top;}
+            /*변환의 기점(기준점)을 변결*/
+        #box6:hover .this{transform:scaleX(2) rotate(90deg);}
+
+        #box7 .this{width: 300px; height: 300px; line-height:300px;}
+        #box7:hover .this{transform:rotateZ(180deg);}
+        /*
+            [3차원 회전]
+            :rotateX(각도) - X축 3차원 회전
+            :rotateY(각도) - Y축 3차원 회전
+            :rotateZ(각도) - Z축 3차원 회전
+        */
+        
+        #box8{perspective:1040px;}
+            /*perspective : 원근효과로 시점의 거리 수치로 작성한다. 부모요소에게 작성한다.*/
+        #box8 .this{width: 300px; height: 300px; line-height:300px;}
+        #box8:hover .this{transform:rotateY(120deg);}
+
+    </style>
+</head>
+<body>
+    <h2>변환(transform)</h2>
+    <p>:요소의 위치이동, 크기조절, 회전, 기울기등의 변환효과를 부여함.</p>
+    <hr/>
+    <div id="box1">
+        <p class="this">위치이동</p>
+    </div>
+    <div id="box2">
+        <p class="this">크기조절</p>
+    </div>
+    <div id="box3">
+        <p class="this">회전</p>
+    </div>
+    <div id="box4">
+        <p class="this">기울리기</p>
+    </div>
+    <div id="box5">
+        <p class="this">다중변형</p>
+    </div>
+    <div id="box6">
+        <p class="this">기점변경</p>
+    </div>
+    <div id="box7">
+        <p class="this">3차원 회전</p>
+    </div>
+    <div id="box8">
+        <p class="this">원근</p>
+    </div>
+
+</body>
+</html>
