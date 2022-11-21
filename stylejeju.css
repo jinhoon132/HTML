@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@import url("font.css");
+
+*{margin:0; padding:0;}
+li{list-style: none;}
+image, iframe{vertical-align: top;}
+
+body{font-family:"Arial","NanumBarunGthic","맑은 고딕";}
+
+
+
+main{width: 1307px; height: 160px; margin:0 auto; border:1px solid #f00;
+    margin-top:100px; position: relative;}
+    #cs{position:absolute; top:-10px; left:0;}
+    #sns{position:absolute; top:-10px; left:440px;}
+    #contant{position:absolute; top:-10px; right:50px;}
+    #main_util{float:left;}
+    #main_util h4{margin-bottom: 12px;}
+    #main_util .util{display:inline-block; vertical-align:top; padding-top: 30px;}
+    #main_util img{width:30px; height:30px;}
+    #util_top h4{font-size:14px; font-weight:bold;}
+    #main_util #contant a{font-size: 13px;}
+    #main_util #contant span{font-size:14px; color:#ff5000; margin-left:15px;}
+    #main_util #contant p{font-size: 12px; margin-bottom: 10px;}
+    #main_util #cs p{font-size:14px; color:#888888; border:1px solid #888888;
+        font-family:"Arial, Helvetica, sans-serif","맑은 고딕";}
+
+
+footer{width:1307px; height:314px; margin:0 auto; border:1px solid #0ff;}
+    #footer_top{float:left; text-align:center; font-size:14px; padding-top: 10px;}
+    #footer_top li{display:inline-block; margin-left:20px; padding-left:35px; border-left:1px solid #888888;}
+    #footer_top li:first-child{border:0; margin-left:0; padding-left:0;}
+    #footer_top li:hover{cursor:pointer; text-decoration:underline;}
+    #footer_mid{padding-bottom:20px;}
+    #footer_mid1{float: left; padding-top: 32px;}
+    #footer_mid1 li{display:inline-block; color:#666666;  margin-left:20px; padding-left: 20px;  border-left:1px solid #888888; font-size:13px;}
+    #footer_mid1 li:hover{cursor:pointer;}
+    #footer_mid1 li:first-child{border:0; margin-left:0; padding-left:0;}
+    #footer_mid2{float:right; color:#888888;}
+    #footer_mid2 p{display:inline-block; font-size:15px;}
+    #footer_mid2 img{margin-left:24px;}
+    #footer_bottom{padding:32px 0 60px;}
+    #bottom_util{padding:50px 0 32px; color:#333333; line-height:20px; font-size:13px;}
+    #bottom_util h5{font-size:13px; font-weight:bold; line-height:24px;}
+    #bottom_util li{display:inline-block; margin-left:20px; padding-left: 20px;  border-left:1px solid #333333;}
+    #bottom_util li:hover{cursor:pointer;}
+    #bottom_util li:first-child{border:0; margin-left:0; padding-left:0;}
+    
+address{float:left; font-size:13px; color:#888888; line-height: 20px;}
+address span{white-space:pre-wrap;}
