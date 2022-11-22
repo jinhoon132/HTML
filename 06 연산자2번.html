@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 연산자 2번</title>
+    <script>
+        let a=10;
+        let b=5;
+
+        /*비교연산자(==, >, >=, <, <=, !=) - p278
+            : 좌변과 우변을 비교하여, 결과를 논리값으로 추출한다*/
+        console.log(a==b); //false
+        console.log(a>b); //true
+        console.log(a>=10); //true
+        console.log(b<5); //false
+        console.log(5<=b); //true
+        console.log(a!=b); //true
+
+        /*논리연산자(&&, ||, !) - p279
+            : 두 개의 논리값을 연산하여 하나의 논리값을 만듦*/
+
+        //AND연산다(&&):좌변과 우변 모두 true인 경우, true
+        console.log(true&&true); //true
+        console.log(true&&false); //false
+        console.log(false&&false); //false
+
+        //OR연산자(||) : 좌변과 우변 중, 단 하나라도 true인 경우, true출력
+        console.log(true||true); //true
+        console.log(true||false); //true
+        console.log(false||true); //true
+        console.log(false||false); //false
+
+        console.log((a>9)&&(b==5)); //true
+        console.log((a>=10)&&(b>5)&&(a+b>15)); //false
+
+        console.log((b==5)&&(a<b)||(a!=11)); //true
+
+        //논리부정연산자(!):논리값을 반전시킴
+        console.log(!true); //false
+        console.log(!(a<b)); //true
+
+        //조건연산자(?:) = 삼항연산자 - p280 : (조건식)?참값:거짓값
+        var fruit = (true)?"딸기":"사과"; //관호안의 값이 참이면 "딸기", 거짓이면 "사과"
+        console.log(fruit);
+
+        b=20;
+        console.log("a는 b보다 "+((a>b)?"크다.":"작다."));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

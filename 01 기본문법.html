@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 기본문법(p259~p263)</title>
+
+    <!--외부 CSS문서 연결-->
+    <link href="style.css" rel="stylesheet">
+
+    <!--html문서 내부에 스타일 작성-->
+    <style>
+        /*CSS*/
+        body{background: #cff;}
+    </style>
+
+    <!--외부 JS문서 연결-->
+    <script src="script.js"></script>
+
+    <!--html문서 내부에 스크립트 작성-->
+    <script>
+        /*js작성*/
+        document.write("자바스크립트 시작!!");
+    </script>
+</head>
+<body>
+    <p><img src="../로스트아크1.jpg" style="width:200px"
+        onmouseover="this.src='../123.jpg'"
+        onmouseout="this.src='../로스트아크1.jpg'"></p>
+        <!--onmouseover와 onmouseout은 이벤트관련 속성중에 일부이다.
+        이벤트를 통해 속성값에는 JS를 작성가능하다.-->
+
+    <!--링크태그의 URL부분을 스크립트로 작성할 수 있다.-->
+    <a href="javascript:alert('경고창!!!')">경고창표시</a>
+
+    <!--스크립트의 경우, 문서의 하단에 작성되는 경우가 많다.
+        주로 body안에서 맨 마지막 스크립트가 작성되는 이유는, 
+        html요소들이 선행되어서 처리되어야 하기 때문이다.-->
+    
+    <script src="script2.js"></script>
+    <script>
+        document.write("<p>body안에 스크립트 작성 !!</p>");
+        document.write("<p>안녕하세요.</p>"); //한줄주석
+        document.write("<p>즐거운 금요일입니다.</p>");
+
+        /*
+            여러줄 주석
+        */
+       //한줄주석
+
+    </script>
+</body>
+</html>

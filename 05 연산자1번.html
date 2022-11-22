@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 연산자1번(p274~p277)</title>
+    <script>
+        /*
+            연산 : 식을 계산하여, 결과를 얻는 과정
+            연산자(연산기호) : 식에서 좌변과 우변을 연산하여 하나의 값을 도출함.
+            ※ 표현식=연산식
+        */
+
+        var a = 10;
+        let b=5, c=3, d=2;
+
+        /*산술연산자(+,-,*,/,%) p-275*/
+        console.log(a+b); //15
+        console.log(a-b); //5
+        console.log(a*c); //30
+        console.log(a/d); //5
+        console.log(a%c); //1
+
+        /*연산의 우선순위*/
+        console.log(a+b*c); //25
+        console.log((a+b)*c); //45
+        console.log(((a+b)*c)/9); //소괄호만 사용하여 우선순위 정함
+
+        /*문자연결연산자(+)
+            좌변과 우변을 연결하여 하나의 문자열을 만듦(p284)*/
+        console.log(100+a); //110 - 산술연산자:좌변과 우변 모두 숫자인 경우
+        console.log("파란"+"하늘"); //"파란하늘"
+        console.log(100+"a"); //"100a"
+        console.log("변수a"+a); //"변수a:10"
+        console.log("식b+c="+(b+c)); //"식b+c=8"
+        
+        console.log("변수b:"+b+", 변수c:"+c); // 변수b:5, 변수c:3
+
+        /*템플릿문자열 : 백틱(``)을 사용하여 문자열을 표현한다.*/
+
+        console.log(`템플릿문자열`);
+        console.log(`변수a:${a}, 변수d:${d}`); //문자열안에서 변수를 호출할 수 있다.
+
+        /*대입연산자(=, +=, -=, *=, /=, %=) - p276*/
+        let e = 11;
+        a=20; //우변의 값(20)을 좌변(a)에 대입한다.(넣는다)
+
+        a = a+1; //가능한식
+        console.log("(1) a의 값은:"+a); //(1) a의 값은:21
+
+        a += 1; //현재 a의 값에 1을 더한다.
+        console.log("(2) a의 값은:"+a); //(2) a의 값은:22
+
+        a /= 2; 
+        console.log("(3) a의 값은:"+a); //(3) a의 값은:11
+
+        a -= 3; //8
+        a %= 5; //3
+        a *= 4; //12
+        console.log("(4) a의 값은:"+a); //(4) a의 값은: 12
+
+        /*증가연산자(++), 감소연산자(--) - p276*/
+        console.log(`[변경전]b:${b}, c:${c}`); // [변경전]b:5, c:3
+        b++; //현재 b값을 1증가
+        c--; //현재 c값을 1감소
+        console.log(`[변경후]b:${b}, c:${c}`); // [변경후]b:6, c:2
+
+        let num=10;
+        let value=null;
+
+        console.log(`[선언] num:${num}, value:${value}`); // [선언]num:10, value:null
+
+        value = ++num; //전위(전치)
+        console.log(`[전위] num:${num}, value:${value}`); // [전위]num:11, value:11
+
+        num = 10;
+        value = null;
+        console.log(`[재선언] num:${num}, value:${value}`); //[재선언]num:10, value:null
+
+        value = num++;
+        console.log(`[후위] num:${num}, value:${value}`); //[후위]num:11, value:10
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
