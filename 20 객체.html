@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 객체(p312)</title>
+    <script>
+        /*
+            객체 : 여러개의 변수(속성)와 여러개의 함수(메소드)를 가질 수 있는 것
+
+
+        */
+
+        var a = 10; //변수선언(변수:하나의 특정한 값을 저장한 수)
+        var f = function(){}; //함수선언(함수:여러개의 실행문을 저장)
+        var o = {}; //객체 선언(p336)
+
+        //객체선언
+        var object = {a:10, b:7, text:"안녕하세요", //객체안에 변수(속성)를 생성한 것
+                    sum:function(x,y){//객체안에 함수(메소드)를 생성한 것
+                        return x+y;
+                    },
+                    printText:function(){
+                        console.log("객체안의 함수!!");
+                    }
+                };
+
+        //객체안에 있는 변수(속성) 호출
+        a = object.a + object.b;
+        console.log(a);
+        console.log(object.text);
+
+        //객체안에 있는 함수(메소드) 호출
+        a = object.sum(100,44);
+        console.log(a);
+        object.printText();
+        document.write("문서만 출력");
+
+        //객체안에 새로운 변수(속성) 추가
+        object.c = 14;
+        console.log(object.c);
+
+        //객체안에 새로운 함수(메소드) 추가
+        object.sub = function(x,y){
+            return x-y;
+        }
+        console.log(object.sub(100,22));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

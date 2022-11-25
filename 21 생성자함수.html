@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 생성자 함수</title>
+    <script>
+        /*
+        var dog1 = {name:"흰둥이", age:2, weight:4.5, color:"흰색"};
+        var dog2 = {name:"누렁이", age:3, weight:6.5, color:"노랑"};
+        */
+
+        /*
+            생성자함수 : 객체를 생성하는 함수
+                - 동일한 속성과 메소드를 가진 객체를 여러개 생성이 가능
+        */
+
+        //생성자함수 선언
+        function Dog(n="멍멍이", a=1,w=1){
+            this.name=n;
+            this.age=a;
+            this.weight=w;
+            this.color="아직모름";
+            this.run = function(){
+                console.log("강아지가 뛰어다닌다.");
+            }
+        }
+
+        //생성자함수를 통해 객체생성
+        var dog1 = new Dog();
+        var dog2 = new Dog("누렁이",4.5,6);
+
+        dog1.name="흰둥이";
+        dog1.color="흰색";
+        dog2.color="노랑색";
+
+        console.log("강아지1의 이름:"+dog1.name);
+        console.log("강아지1의 나이:"+dog1.age);
+        console.log("강아지1의 무게:"+dog1.weight);
+        console.log("강아지1의 색상:"+dog1.color);
+        dog1.run();
+
+        console.log("강아지2의 이름:"+dog2.name);
+        console.log("강아지2의 나이:"+dog2.age);
+        console.log("강아지2의 무게:"+dog2.weight);
+        console.log("강아지2의 색상:"+dog2.color);
+        dog2.run();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

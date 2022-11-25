@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 Date객체(p323)</title>
+    <script>
+        /*
+            자바스크립트 내장객체 - api문서
+            https://devdocs.io/javascript/
+        */
+
+        //date객체는 날짜와 시간 정보를 담고, 제어하는 객체
+
+        let now = new Date(); //현재 날짜와 시간의 정보를 가진 객체 생성됨.
+        console.log(now);
+
+        let start = new Date(2022,10,1);
+        console.log(start);
+
+        var output = "오늘 날짜 : ";
+        output += now.getFullYear()+"년 ";
+        output += now.getMonth()+1+"월 ";
+        output += now.getDate()+"일 ";
+
+        var week = "";
+        switch(now.getDay()){
+            case 0: week="일"; break;
+            case 1: week="월"; break;
+            case 2: week="화"; break;
+            case 3: week="수"; break;
+            case 4: week="목"; break;
+            case 5: week="금"; break;
+            case 6: week="토"; break;
+
+        }
+        output += week+"요일<br/>";
+        output += "현재 시간 : ";
+        output += now.getHours()+"시";
+        output += now.getMinutes()+"분";
+        output += now.getSeconds()+"초";
+
+        document.write(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

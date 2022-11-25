@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 코드 위치</title>
+    <script src="6-1.js"></script>
+    <script>
+        document.write("Welcome Home<br/>");
+        document.write("<hr/>");
+        document.write("저희 홈 페이지 오신 것을 환영합니다.<br/>");
+    </script> 
+</head>
+<body>
+    <h3>마우스를 올려 보세요</h3>
+    <hr>
+    <div onmouseover="over(this)" onmouseout="out(this)">
+        여기에 마우스를 올리면 배경색이 노란색으로 변합니다.
+
+    </div>
+    <hr style="border:2px solid #f00"/>
+    <h2>문제 3-(2)</h2>
+    <script>
+        document.write("document.write()로 표만들기");
+        document.write("<table style='border:1px solid #000'>");
+            for(var i=1; i<=2; i++){
+                document.write("<tr>");
+                    for(var j=i; j<=10; j++){
+                        if(j==0) {
+                        document.write(<th>);
+                            if(i==1){
+
+                            }else{
+
+                            }
+                    }
+                    document.write("</tr>");
+            }
+            document.write("</table>");
+    </script>
+    
+</body>
+</html>
