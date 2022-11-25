@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 매개변수와 인수</title>
+    <script>
+        var a = 10;
+        var b = 5;
+
+        function sum(x,y){ //x와 y는 매개변수
+            var value = a+b;
+            console.log("두 수의 합:"+value);
+        }
+
+        //함수호출시 각 매개변수에 들어갈 값을 지정해주어야한다.
+        //각 매개변수에 들어가는 값을 "인수"라고 한다.
+        sum(20,13); //순차적으로 x=20, y=13
+        sum(8,6); // x=8, y=6
+        sum(a,b);
+
+        function sub(x=10,y=3){ //각 매개변수에 기본값을 설정
+            var value = x-y;
+            console.log("두 수의 차:"+value);
+        }
+
+        sub(); //인수가 없거나, 부족하면 기본값을 사용
+        sub(20); //앞에서부터 채워짐. x=20 y는 기본값을 사용
+        sum(100,33);
+
+        function mul(x,y=2){
+            //매개변수의 기본값은 일부만 설정이 가능하다.
+            //일부만 설정될 경우, 뒤에서부터 설정되어 있어야한다.
+            var value = x*y;
+            console.log("두 수의 곱:"+value);
+        }
+
+        mul(10); //x에 들어갈 값은 반드시 필요
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

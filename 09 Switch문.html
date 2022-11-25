@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 Switch문</title>
+    <script>
+        /*
+            Switch문 : 값에 따라 다른 코드를 실행할 때, 사용
+        */
+
+        let fruits = "사과"
+        const APPLE = "사과"; //값이 변하지 않음
+        var cherry = "체리"
+
+        switch(fruits){
+            case "바나나":
+                document.write("바나나 출력!!<br/>");
+                break; //break예약어는 블록 밖으로 나오는 기능을 한다.
+            case APPLE: //case값에는 상수나 리터럴만 가능하다.
+                document.write("사과 출력!!<br/>");
+                break;
+            case cherry: //변수나 연산식은 사용할 수 없다.
+                document.write("체리 출력!!<br/>");
+                break;
+            default:
+                //식에 있는 값과 case의 값이 일치하는 것이 없는 경우
+                //switch문의 맨마지막에 작성한다.
+                document.write("case중 일치하는 과일이 없다.<br/>");
+        }
+
+        let day = "화";
+        switch(day){
+            case "월":
+            case "화":
+            case "수":
+            case "목":
+            case "금":
+                documet.write("정상영업함.<br/>");
+                break;
+            case "토":
+            case "일":
+                documet.write("휴일<br/>");
+                break;                
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

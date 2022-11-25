@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 반복문(do while) - p293</title>
+    <script>
+        /*while*/
+        let a = 1;
+        while(a<=10){
+            console.log("while문 반복-a"+a);
+            a++;
+        }
+
+        /*do while문*/
+        let b = 1;
+        do{
+            console.log("do while문 반복-b"+b);
+            b++;
+        }while(b<=10);
+
+        /*
+            break; (p294) 블록밖으로 나감(반복을 종료함.)
+            continue; (p295) 현재반복을 넘어감
+        */
+
+        var num = 0;
+        while(num<10){
+            num++;
+            if(num==4) continue; //반복을 넘어감,
+            if(num==7) break; //반복이 종료됨.
+            document.write(`반복문 ${num}번째 실행!<br/>`);
+            
+        }
+
+        document.write("<hr/>반복종료!!!");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

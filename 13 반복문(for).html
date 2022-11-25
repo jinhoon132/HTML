@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 반복문(for) - p291</title>
+    <script>
+        /*
+            while문과 for문 둘다 동일한 기능을 하는 반복문이다.
+            더 좋고, 나쁨은 없다.
+            대체적으로 for문을 선호
+        */
+
+        var a = 1; //변수생성(초기화)
+        while(a<=10){//반복조건
+            console.log("while-"+a);
+            a++; //변화식:반복을 할때마다 변화되는 식
+        }
+
+        //for(변수초기화; 반복조건; 변화식;)
+        for(var a = 1; b<=10; b++){
+            console.log("for-"+b);
+        }
+
+        //반복문을 중첩하는 경우 - 주로 for문 사용
+        for(var i=1; i<=3; i++){
+            console.log(`******첫번째 for문-${i}******`);
+            for(var j=1; j<=5; j++){
+                console.log(`두번째 for문#{i}/#{j}`);
+            }
+            console.log(`------------------------------`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

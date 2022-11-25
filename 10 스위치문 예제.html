@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 스위치문 예제</title>
+    <script>
+        let now = new Date(); //현재 날짜와 시간의 정보를 담은 객체
+        let month = now.getMonth()+1; //now객체에서 월데이터를 추출
+
+        /*let score = prompt("현재는 몇월입니까?");*/
+        let answer = confirm(`현재는 ${month}월이 맞나요?(맞으면 확인)`);
+
+        if(!answer){
+            month = prompt("현재 월을 입력하세요."); //"5"
+            month = parseInt(month); //문자("5")를 정수(5)로 변환함
+        }
+
+        /*
+            현재 월을 입력받아서,
+            계절과 말일을 출력하는 식을 작성해보세요.
+            (예)
+            9월은 가을입니다.
+            9월은 30일까지 있습니다.
+        */
+
+        switch(month){
+            case 3: case 4: case 5:
+                documet.write(`${month}월은 봄입니다.<br/>`);
+                break;
+            case 6: case 7: case 8:
+                documet.write(`${month}월은 여름입니다.<br/>`);
+                break;
+            case 9: case 10: case 11:
+                documet.write(`${month}월은 가을입니다.<br/>`);
+                break;
+            case 12: case 1: case 2:
+                documet.write(`${month}월은 겨울입니다.<br/>`);
+                break;
+
+        }
+
+        switch(month){
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                document.write(`${month}월은 31일까지 있습니다.<br/>`);
+                break;
+            case 4: case 6: case 9: case 11:
+                document.write(`${month}월은 31일까지 있습니다.<br/>`);
+                break;
+            case 2:
+                document.write(`${month}월은 28일 또는 29일까지 있습니다.<br/>`);
+                break;
+
+            default:
+                document.write("잘못된 값을 입력하셨습니다.<br/>");
+                document.write("1부터 12까지의 값을 입력하세요.");
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

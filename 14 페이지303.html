@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 페이지303</title>
+    <script>
+        var num = prompt("정수를 입력하세요.");
+        num = parseInt(num); //문자를 숫자로
+
+        /*for(let i=1; i<=num; i++){
+            for(let j=1; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }*/
+
+        for(let i=1; i<=num-1; i++){
+            for(let j=1; j<=num-i; j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

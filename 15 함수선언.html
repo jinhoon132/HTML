@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 함수선언(p296)</title>
+    <script>
+        /*
+            함수:일렬의 처리과정(실행문)을 묶어놓고, 이름을 부여한 것
+                - 필요할 때 호출하여, 사용하기 위함
+                - 반복하여 사용할 수 있다.
+                - 인수값에 따라 다른 결과를 만들어낼 수 있다.
+        */
+
+        /*프로그래밍에서는 선언*/
+
+        //함수호출
+        coffee();  //선언식보다 먼저 호출될 수 있다.
+        //noodle();  타입에러발생 : 표현식보다 먼저 호출될 수 없다.
+        console.log("+++++++++++++++++");
+
+        //함수선언
+        function coffee(){
+        console.log("1.종이컵이 나온다.");
+        console.log("2.커피가루가 나온다.");
+        console.log("3.온수가 나온다.");
+        console.log("4.완료불빛이 켜진다.");
+        }
+
+        
+
+        //변수호출
+        num;
+        //함수호출
+        coffee();
+        noodle();
+        console.log("***********");
+
+
+        //변수선언
+        console.log("num:"+num);
+        var num = 5; //표현식(=연산식)
+
+        //함수선언
+        var noodle = function(){; //익명함수 : 이름이 없는 함수
+            console.log("1.물을 끓인다.");
+            console.log("2.면을 삶는다.");
+            console.log("3.스프를 넣는다.");
+            console.log("4.계란을 넣는다.");
+        }
+        //함수호출
+        num;
+        coffee();
+        noodle();
+        console.log("******************");
+        coffee();
+        noodle();
+
+        /*
+            예약어 : 미리 약속된 기능을 하기위해 만들어진 단어
+                (var, let, const, if, else, switch, do, while, for, break, continue, function)
+                - 식별자(변수명, 함수명)로 사용할 수 없다.
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

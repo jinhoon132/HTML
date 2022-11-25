@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19 내장함수</title>
+    <script>
+        /*
+            내장함수 : 이미 시스템에 정의되어 있는 함수
+                      책에서는 전역함수
+        */
+
+        var num = prompt("정수를 입력해주세요.");
+
+        var is = isNaN(num); //인수가 숫자가 아니면, true 리턴
+
+        if(is) document.write(`입력된 값 ${num}은 문자이다.<br/>`);
+        else document.write(`입력된 값 ${num}은 숫자이다.<br/>`);
+
+        num = parseInt(num); //인수로 받은 값을 정수로 변환하여 반환
+        //parseFloat(인수) : 인수로 받은 값을 실수로 변환하여 반환
+        
+        function counter(){
+            num++;
+            document.write(num+"초<br/>");
+        }
+
+        //counter(); - "1초<br/>""
+        //counter(); - "2초<br/>""
+
+        var count= setInterval(counter,1000);
+        //setInterval(함수,시간); 일정시간(밀리초)마다 함수를 호출함.
+
+        function timer(){
+            document.write("카운트 종료!!<br/>");
+            clearInterval(count); //setInterval함수를 종료
+        }
+
+        setTimeout(timer,10000);
+        //setTimeout(함수,시간); 지정된 시간에 함수를 단 한번 호출
+        //clearTimeout(); setTimeout을 실행전에 지울 수 있음.
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 반복문(while) - p292</title>
+    <script>
+        /*반복문(while) : 해당되는 문장을 반복하여 실행함.*/
+
+        console.log("실행문1");
+        if(false)console.log("실행문2"); //조건문
+        while(true)console.log("실행문3"); //반복문
+        //반복문을 만들 때에는 [무한반복]이 되지않도록 구현해야한다.
+
+        /*기본적인 반목문의 형태*/
+        var i = 0;
+
+        while(i<10){ //반복조건은 반복을 시작할 때마다 매번 검증한다.
+            console.log("반복문실행-"+i);
+            i++;//반복을 할때마다, 변수i는 1씩 증가함
+        }
+
+        console.log("현재 i의 값:"+i);
+
+        //1부터 100까지의 합을 구하는 식
+        var num = 1;
+        var total = 0;
+
+        while(num<=100){ //num:1,2,3,4....~100
+            total += num;
+            num++;
+        }
+        console.log("1부터 100까지의 합"+total);
+
+        //1부터 100까지의 짝수합을 구하는 식
+        num = 0;
+        total = 0;
+        while(num<=100){
+            total += num;
+            num += 2; //num의 값은 2씩 증가
+        }
+        console.log("1부터 100까지의 짝수합"+total);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

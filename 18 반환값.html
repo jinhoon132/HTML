@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 반환값</title>
+    <script>
+        function sum(x,y){
+            let value = x+y;
+            console.log("value의 값:"+value);
+            return value; //반환값, 함수의 종료
+            //반환값 : 함수를 실행하면 호출된 위치에 반환되는 값
+            //함수의 종료 : return다음에 있는 식은 실행되지 않는다.
+            console.log("sum함수안에 있는 실행문!!!") // 실행되지 않음
+        }
+
+        var num = sum(10,7);
+
+        console.log("num의 값:"+num);
+
+        console.log("함수의 결과:"+sum(20,4));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
