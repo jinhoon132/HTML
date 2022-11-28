@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 클래스문법</title>
+    <script>
+        /*
+            자바, C++, C#의 경우, 클래스기반의 객체지향언어이며, 
+            자바스크립트는 프로토타입기반의 객체지향언어이다.
+            프로토타입은 객체의 원형을 뜻한다.
+            프로토타입언어는 클래스가 필요없는 언어이다.
+
+            클래스는 ES6에서부터 추가되었다.
+            클래스는 객체를 정의하는 일종의 틀(설계도)이다.
+
+            프로토타입과 클래스는 크게 다르지 않다.
+
+            프로토타입기반의 언어는 "상속", "캡슐화", "다양성"에 취약하다.
+
+            결론 : 프로토타입과 클래스는 크게 다르지 않다.
+                   객체의 틀을 만드는 방법에 클래스와 프로토타입이 있다.
+        */
+
+        //클래스 정의
+        class Rectangle{
+            /*
+                num=30; - Public속성 : 클래스 밖에서도 접근가능
+                #num=30; - Private속성 : 클래스 밖에서 접근불가능 
+            */
+
+
+
+            widht = 10; //객체안의 속성
+            height = 5;
+
+            //정적속성 : 객체생성없이 호출이 가능한 속성
+            static name = "사각형관련 클래스";
+
+            constructor(w=this.#width,h=this.#height){//생성자함수:생략가능
+                this.#width = w;
+                this.#height = h;
+            }
+            //세터(setter): 속성에 값을 집어넣음
+            set width(n=0){
+                if(n>=0) this.#width = n;
+                else throw "너비값에는 음수를 넣을 수 없습니다."
+
+            }
+            set height(n=0){
+                if(n>=0) this.#height = n;
+                else throw "높이값에는 음수를 넣을 수 없습니다."
+
+            }
+
+            //게터(getter): 속성의 값을 내보냄
+            get width(){return this.#width;}
+            get height(){return this.#height;}
+
+            getArea(){ //Private메소드 : 객체안에서만 접근가능
+                return this.#width * this.#height;
+            }
+            infoText(){
+                var ouput = "";
+                output+=`사각형의 정보-너비:${this.#width}, `;
+                output+=`높이:${this.#height}, 넓이:`;
+                output+=this.getArea();
+                return output;
+            }
+            //정적 메소드 : 객체생성없이 호출가능
+            static getText(){
+                console.log("정적메소드:"+this.name);
+                console.log("너비:"+this.#width);
+                console.log(this.infoText());
+            }
+
+        }//end.class
+
+        // var rec1 = new Rectangle();
+        // //rec1.#width = 33; //기존의 값에 접근 할 수 없다.
+        // rec1.width = 8; //세터(setter)를 통해 값을 집어넣음
+        // rec1.height = 5;
+        // var rec2 = new Rectangle(44,5);
+
+        //게터(get width, get height)를 통해 값을 가져옴.
+        console.log("rec1의 너비:"+rec1);
+        console.log("rec1의 높이:"+rec1.height);
+        console.log(rec1.infoText());
+        console.log(rec2.infoText());
+        //rec2.getText(); - 호출안됨
+        console.log("rec2.name:"+rec2.name); //호출안됨
+        console.log(Rectangle.name); //정적속성 호출
+
+        console.log(Rectangle.name); //정석속성 호출
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

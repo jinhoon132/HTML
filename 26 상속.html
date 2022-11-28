@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26 상속</title>
+    <script>
+        class Rectangle{
+            w;
+            h;
+            constructor(x=10,y=5){
+                this.w = x;
+                this.h = y;
+            }
+            getArea(){
+                return this.w*this.h
+            }
+            getInfo(){
+                let a = this.getArea();
+                return `도형의 W:${this.w}/H:${this.h}/A:${a}`;
+            }
+        }
+
+        //상속
+        class Triangle extends Rectangle{
+            //Rectangle클래스를 상속받는 Triangle클래스를 작성
+            constructor(a,b){ //Triangle의 생성자함수 정의
+                super(a,b); // 부모클래스의 생성자 함수 호출
+            }
+            //오버라이딩:부모클래스의 메소드를 재정의함
+            getArea(){
+                return this.w*this.h/2;
+            }
+        }
+
+        var rec = new Rectangle(10,5);
+        console.log(rec.getInfo());
+        console.log(typeof(rec));
+
+        var tri = new Triangle(20,8);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

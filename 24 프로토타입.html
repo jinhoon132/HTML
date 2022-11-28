@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 프로토타입</title>
+    <script>
+        /*
+            프로토타입(객체의 원형(틀))
+            : 자바스크립트에만 있음
+        */
+
+        Rectangle.prototype.width = 10;
+        Rectangle.prototype.height = 5;
+        Rectangle.prototype.getArea = function(){
+                return this.width * this.height;
+            }
+        Rectangle.prototype.this.infoText = function(){
+                var output = "";
+                output += `사각형의 정보-너비:${this.width}, `;
+                output += `높이:${this.height}, 넓이:`;
+                output += this.getArea();
+                return output;
+            }
+
+        //생성자함수 : 객체를 만들어주는 함수
+        function Rectangle(w=this.width, h=this.height){
+            this.width = w;
+            this.height = h;            
+        }
+
+        var rec1 = new Rectangle();
+        var rec2 = new Rectangle(44,20);
+
+        rec1.width = 12;
+        rec1.height = 8;
+        console.log(rec1.infoText());
+        console.log(rec2.infoText());
+
+        //상속 : 부모 프로토타입을 이어받아 사용할 수 있다.
+        Square.prototype = Rectangle.prototype; //상속
+        Square.prototype.name = "정사각형"; //부모메소드를 수정
+        Square.prototype.this.infoText = function(){
+                var output = "";
+                output += `사각형의 정보-너비:${this.width}, `;
+                output += `높이:${this.height}, 넓이:`;
+                output += this.getArea();
+                return output;
+            }
+
+
+
+        function Square(l){
+            this.base = Rectangle; //부모 프로토타입의 생성자함수
+            this.base(1,1); //매개변수w와 매개변수h에 동일한 값(1)을 넣음
+        }
+
+        var sq = new Square(8);
+
+        console.log(sq.infoText());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

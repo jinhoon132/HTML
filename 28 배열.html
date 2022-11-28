@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 배열(p316)</title>
+    <script>
+        /*
+            배열 : 여러개의 원소(값)들을 연속적으로 저장하고, 전체를 하나의 단위도 다루는 데이터 구조
+        */
+
+        //배열만들기
+        let num = [11,22,33,44,55];
+        var week = ["월","화","수","목","금","토","일"];
+    
+        //배열안의 값 호출하기
+        console.log(num); //배열자체 정보가 나타남
+        console.log(num[3]); //배열명[인덱스] = 배열값이 호출
+        //배열의 인덱스는 0부터 시작한다.
+
+        //배열에 값 추가하기
+        console.log(week[5]);
+        num[5] = 66;
+        console.log(num[5]);
+
+        num[9] = 100;
+        console.log(num[9]);
+        console.log(num);
+
+        //배열의 크기를 확인하기
+        console.log(num.length);
+        console.log(week.length);
+
+        //배열의 크기 조정하기
+        num.length = 12;
+        week.length = 5;
+        console.log(num.length); //12
+        console.log(num);
+        console.log(week.length); //5
+        console.log(week[6]); //undefined
+
+        //배열은 객체이다(p321)
+        let array = new Array(5); // 배열을 생성함. 인수로 배열크기지정
+        array[0] = 0; //정수
+        array[1] = 5.5; //실수
+        array[2] = "문자"; //문자열
+        array[3] = new Date(); //객체
+        array[4] = function(){console.log("함수");};  //함수
+        console.log(array);
+
+        array[4](); // 배열안 함수 호출
+
+        var arr= new Array(10,20,30,40,50);
+        console.log(arr);
+
+        console.log(arr.toString()); //모든값을 연결하여, 하나의 문자열을 만듦.
+    
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 Math객체(p331)</title>
+    <script>
+        //객체는 여러개의 변수(속성)와 여러개의 함수(메소드)로 되어 있다.
+
+        let now = new date(); //객체생성 
+        let today = now.getMonth+1+"/"+now.getDate();
+        console.log(today);
+
+        //var math = new Math(); 생성자함수가 없어, 객체로 만들지 않음.
+        //객체안의 모든 속성과 메소드가 static이다.
+
+        console.log(Math.PI); //원주율 값 출력
+
+        let area = Math.PI * 5 * 5; //반지름이 5인 원의 넓이
+
+        console.log(area);
+
+        console.log(Math.round(area)); //반올림
+
+        let num = Math.random() //난수를 생성(0~1) 사이의 실수
+
+        console.log(num); // 0 <= num <1
+        //1~60까지의 랜덤한 수
+        num *= 60; // 0 <= num < 60
+        num *= 1;  // 1 <= num < 61
+
+        console.log(Math.floor(num));  // 소수점이하의 수를 버림
+        // 1 ~ 60까지의 랜덤한 정수 발생
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 복습</title>
+    <script>
+        /*
+            학생관리를 위해, 학생별로 객체를 생성하려고 함.
+            속성은 이름(name), 국어점수(kor), 영어점수(eng), 수학점수(math)
+            info메소드를 실행한 경우
+            "name의 점수:국어kor점, 영어 eng점, 수학 math점"
+        */
+        /* 학생수 적을땐 가능 리터럴식
+        var stu1 = {
+            name:"곽진훈",
+            kor:100,
+            eng:70,
+            math:80,
+            info:function(){
+                console.log(`${name}의 점수 : 국어${kor}점, 영어${eng}점, 수학${math}점`);
+            }
+        };
+        */
+
+        /*생성자 함수*/
+
+        function Student(name="지니",k=0,e=0,m=0){
+            this.name = name; //this = 프로토타입
+            this.kor = k;
+            this.eng = e;
+            this.math = m;
+            this.size = {weight:80, height:170}; //객체안의 객체
+            this.info = function(){
+                console.log(`${this.name}의 점수 : 국어${this.kor}점, 영어${this.eng}점, 수학${this.math}점`);
+            }
+            this.sizeInfo = function(){
+                console.log(`${this.name}의 몸무게:${this.size.weight}`);
+                console.log(`${this.name}의 키:${this.size.height}`);
+            }
+        }
+        var stu1 = new Student("하니",50,60,80);
+        var stu2 = new Student("태연",80,70,100);
+
+        stu2.size.weight = 60;
+        stu2.size.height = 160;
+
+        stu1.info();
+        stu1.sizeInfo();
+        stu2.info();
+        stu2.sizeInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
