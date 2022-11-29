@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 String객체</title>
+    <script>
+        //String 객체(=문자열객체)
+        var text1 = "hello";
+        var text2 = new String("coffee");
+
+        console.log(text1);
+        console.log("text1타입:"+typeof(text1));
+        console.log(text2);
+        console.log("text2타입:"+typeof(text2));
+
+        text1 = "apple";
+        text2 = "rainbow"; //값이 변경된 것이 아니라, 재정의 됨
+
+        console.log(text1);
+        console.log("text1타입:"+typeof(text1));
+        console.log(text2);
+        console.log("text2타입:"+typeof(text2));
+
+        console.log("text1의 글자수:"+text1.length);
+        console.log(text1[0]);
+        console.log(text1[1]);
+        console.log(text1[2]);
+
+        console.log(text1.toUpperCase()); //문자열 변수여도, string객체의 메소드를 동일하게 사용이 가능함
+
+        console.log("text1타입:"+typeof(text1));
+
+        var text3 = new String("sunday"); //객체타입
+        console.log(text3); //String 객체는 수정이 불가능
+        console.log(text3.replace("sun","mon"));
+        console.log(text3);
+
+        console.log("text1타입:"+typeof(text1));
+        console.log("text3타입:"+typeof(text3));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

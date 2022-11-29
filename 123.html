@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    /*<script>
+        //문제7
+        let text= "Web Programming";
+        let x = text.length;
+        console.log(text.length);
+        console.log(text[2]);
+        console.log(text.split(" ").length); //메소드체인:메소드의 반환값에 따라 연결하여 작성가능하다
+        console.log(text.replace("Web","HTML5"));
+        console.log(text.charAt(4));
+    </script>
+    <script>
+        //문제9
+        let student = {
+            id : 1,
+            name : "kitae",
+            grade : 3.9
+        };
+    </script>*/
+    <script>
+        //문제10-1
+        let box = new Object();
+        box.color = "red";
+        box.size = 10;
+        box.amount = 0
+        box.fill = function(){ this.amount += 2};
+        box.consume = function(){ this.amount -= 2};
+        //문제10-2
+        let box = new Box(11);
+        box.fill();
+        document.write("<br/>10.<br/>");
+        document.write(`amount:${box.amount}<br/>`);
+        box.consume();
+        document.write(`amount:${box.amount}<br/>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

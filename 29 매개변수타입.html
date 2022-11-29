@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 매개변수타입</title>
+    <script>
+        //함수선언
+        function func1(ab){
+            console.log("함수1번 실행");
+            var value = 100 + ab;
+            console.log("매개변수ab타입:"+typeof(ab));
+            console.log("함수1번 종료 value:"+value);
+        }
+
+        //함수1번 호출
+        func1(10);
+        func1("값");
+        let num = 22;
+        func1(num);
+
+        //함수선언
+        function func2(ab){ //매개변수 ab:함수타입 vyourdr parkdanjong
+            console.log("함수2번 실행");
+            ab();//ab는 함수로써 호출됨
+            console.log("매개변수ab타입:"+typeof(ab));
+            console.log("함수2번 종료");
+        }
+        //함수2호출
+        var printText = function(){
+            console.log("printText함수 실행내용!!!");
+        }
+
+        func2(printText); //인수로 함수가 작성됨.
+        func2(function(){
+            console.log("익명함수 실행내용~~");
+        })
+        //함수선언
+        function func3(ab){ //매개변수ab : 객체타입
+            console.log("함수3번 실행");
+            var value = ab.x + ab.y + ab.c.i + ab.c.j;
+            ab.text();
+            console.log("매개변수ab타입:"+typeof(ab));
+            console.log("함수3번 종료:"+value);
+        }
+
+        var cd = {i:3,j:4}
+        var ob = {x:10, y:2, z:9, c:cd, text:printText}
+        func3(ob);
+        func3({x:100,y:50,c:{i:5,j:3}, text:function(){
+            console.log("객체안의 메소드!!");
+        }});
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 미디어쿼리</title>
+    <style>
+        body{background: #ccc; font-size: 30px; font-weight:bold;}
+        pre{white-space:pre-wrap;}
+
+        /*화면의 최대너비가 500px인 경우(화면너비가 500px이하)*/
+        @media (max-width:500px){
+            body{background: #fcc;}
+        }
+        /*화면의 최소너비가 1200px인 경우(화면너비가 1200px이상)*/
+        @media (min-width:1200px){
+            body{background: #ffc}
+        }
+
+        /*화면의 너비가 700px ~ 1000px 사이인 경우*/
+        @media (min-width:700px) and (max-width:1000px){
+            /*and연산자와 동일하게 모든조건이 만족해야함 함.*/
+            body{background: #cfc;}
+        }
+        
+        /*화면의 너비가 600px이하거나, 1100px이상인 경우*/
+        @media (max-width:600px) and (min-width:1100px){
+            /*or연산자와 동일하게 하나의 조건이라도 만족하면 적용됨*/
+            body{background: #00f;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>미디어쿼리</h1>
+    <p>미디어의 타입이 아닌, 미디어의 특성에 따라 스타일을 적용함.</p>
+    <pre>
+        width : 화면(창)의 너비
+        height : 화면(창)의 높이
+        divice-width : 디바이스 너비
+        divice-height : 디바이스 높이
+        orientation : 디바이스의 방향(가로, 세로)
+        aspect-ratio : 창의 가로세로비
+        divice-aspect-ratio : 디바이스의 가로세로비
+        color : 컬러인 경우, 해당 색의 비트수
+        color-index : 출력 디바이스가 갖고 있는 색상표의 엔트리수
+        monochrome : 흑백
+        resolution : 해상도
+    </pre>
+    
+</body>
+</html>

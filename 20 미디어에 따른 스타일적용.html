@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 미디어에 따른 스타일적용</title>
+    <link href="style1.css" rel="stylesheet">
+
+    <style>
+        @import "reset.css";
+        @import "style2.css" speech; /*음성출력장치*/
+        body{background:#ffc;}
+        h1{color:#00f;}
+
+        @media print{ /*프린트(인쇄미리보기 확인가능)*/
+            body{background:#cff;}
+            h1{color:#f00;}
+        }
+    </style>
+</head>
+<body>
+    <h1>미더어에 따른 스타일적용</h1>
+    <p>출력되는 미디어(디바이스)의 타입에 따라 적용되는 스타일을 다르게함.</p>
+    <pre>
+        all - 모든 디바이스
+        brille - 점자 디스플레이
+        embossed - 점자 프린터
+        handheld - 휴대용단말기
+        print - 프린터(인쇄미리보기)
+        projection - 프로젝터
+        speech - 음성합성장치
+        screen - 컴퓨터 디스플레이(pc, 태블릿, 모바일)
+        tty - 문자폭이 고정된 미디어
+        tv - tv
+    </pre>
+</body>
+</html>
