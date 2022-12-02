@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37 html태그에 이벤트작성</title>
+</head>
+<body onload="bodyBg()">
+    <h1>html 태그에 이벤트 리스너 작성</h1>
+    <p onmouseenter="this.style.background='pink'" onmouseleave="this.style.background='cyan'">마우스를 올리면 색 변경</p>
+    <hr/>
+    <img alt="롤오버이미지" src="../123.jpg" onmouseover="this.src='../로스트아크1.jpg'" onmouseout="this.src='../123.jpg'"/>
+    <hr/>
+
+    <a onclick="changeBg(this)">red</a>
+    <a onclick="changeBg(this)">blue</a>
+    <a ondblclick="changeBg(this)">green</a>
+
+
+    <script>
+        function bodyBg(){
+            document.body.style.backgroundColor="#ffc";
+        }
+        function changeBg(ob){
+            var color = ob.innerHTML;
+            document.body.style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>

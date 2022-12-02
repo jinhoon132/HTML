@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 이벤트객체(p399)</title>
+    <script>
+        window.onload = function(){
+            let btn = document.getElementById("btn");
+
+            btn.addEventListener("click",function(e){
+                //매개변수e는 이벤트 발생시 생성되는 이벤트객체를 전달받을 변수
+                e.preventDefault(); //태그 원래의 기능이 동작되지 않게함/
+
+                let text="";
+                text += "이벤트타입:" + e.type + "<br/>";
+                text += "발생객체:" + e.target + "<br/>";
+                text += "실행객체:" + e.currentTarget + "<br/>";
+                text += "취소여부:" + e.defaultPrevented;
+
+                document.querySelector("div").innerHTML=text;
+            })
+        }
+    </script>
+</head>
+<body>
+    <p><a id="btn" href="https://www.naver.com">네이버</a></p>
+    
+</body>
+</html>

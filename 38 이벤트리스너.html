@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 이벤트리스너</title>
+    <script>
+        var p1, p2;
+        //init():맨처음 시작하는 함수, 초기화 함수
+        function init(){
+        p1 = document.getElementById("p1");
+        p1.style.float = "left";
+        p1.style.padding = "20px";
+        p1.style.fontSize = "30px";
+        p1.style.border = "2px solid #000";
+        //이벤트리스너 속성을 사용하여 등록
+        //p1.onmouseover = p1_over(); X 함수가 실행되고, 반환값이 들어감
+        p1.onmouseover = p1_over;  //함수를 등록해야함
+        p1.onmouseout = function(){
+            p1.style.backgroundColor="#cff";
+        }
+
+        p2 = document.getElementById("p2");
+        p2.style.cssText = "float:left; padding:20px; fontsize:30px; border:2px solid #000;"
+        p2.addEvertListener("mouseover",p2_over);
+        p2.addEvertListener("mouseout",p2_out);
+        p2.addEvertListener("mouseout",function(){
+            document.body.style.backgroundColor="#cfc";
+        });
+    }
+
+
+    function p1_over(){
+        p1.style.backgroundColor = "#ffc";
+    }
+    function p2_over(){
+        p2.style.backgroundColor = "#fcc";
+    }
+    function p2_out(){
+        p2.style.backgroundColor = "#cfc";
+    }
+    </script>
+</head>
+<body onload="init()">
+    <p id="p1">이벤트 리스너 속성에 함수 등록</p>
+    <p id="p2">addEventListener() 활용</p>
+</body>
+</html>

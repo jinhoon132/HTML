@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39 클릭으로 제어하기</title>
+    <style>
+        #fixed_area{position: fixed; right:0; top:0; width:240px; height:100%; background: #fdc;
+            box-shadow:-5px 0 5px rgba(0,0,0,.3); transition:all .4s;}
+        #fixed_area .btn{position:absolute; width:50px; height: 80px; top:50%; 
+            margin-top:-40px; left:-50px; background: #fdc; 
+            border-radius:50px 0 0 50px; box-shadow:-5px 0 5px rgba(0,0,0,.3);}
+        #fixed_area .btn i{position:absolute; width:24px; height:4px; border-radius:2px;
+            background: #a33; top:50%; left:20px; margin-top:-2px; transition: all .4s;}
+        #fixed_area .btn i:nth-child(1){transform:rotate(45deg);}
+        #fixed_area .btn i:nth-child(2){opacity:0;}
+        #fixed_area .btn i:nth-child(3){transform:rotate(-45deg);}
+
+        #fixed_area.active .btn i:nth-child(1){transform:rotate(0) translateY(-8px);}
+        #fixed_area.active .btn i:nth-child(2){opacity:1;}
+        #fixed_area.active .btn i:nth-child(3){transform:rotate(0) translateY(8px);}
+    </style>
+    <script>
+        window.onload = function (){ //모든 요소가 브라우저에 나타난 상태
+            var fixed_area = document.getElementById("fixed_area");
+            var btn = document.querySelector("#fixed_area .btn");
+            var openArea = true;
+
+            btn.addEventListener("click",function(){
+                fixed_area.classList.toggle("active"); //toggle로 부여와 제거로도 가능
+                if(fixed_area.classList.contains("active")){
+                fixed_area.style.transform = "translateX(100%)";
+            }else{
+                fixed_area.style.transform = "translateX(0)";
+            }
+            });
+            /*
+            btn.addEventListener("click",function(){
+                if(openArea){
+                fixed_area.style.transform = "translateX(100%)";
+                fixed_area.classList.add("active"); //부여
+                openArea=false;
+            }else{
+                fixed_area.style.transform = "translateX(0)";
+                fixed_area.classList.remove("active"); //제거
+                openArea=true;
+            }
+            });
+
+            */
+            /*
+                Elment.classList.add(); 클래스 부여
+                Elment.classList.remove(); 클래스 제거
+                Elment.classList.toggle(); 부여와 제거
+                Elment.classList.contains(); 클래스 확인(출력 논리값)
+                Elment.classList.replace(인수1,인수2); 인수1 클래스값을 인수2로 교체
+                Elment.classList.item(); 해당 순번의 클래스를 반환
+            */
+        }
+        
+    </script>
+</head>
+<body>
+    <aside id="fixed_area">
+        <a class="btn"><i></i> <i></i> <i></i></a>
+        <div class="inner">
+            내용작성
+        </div>
+    </aside>
+    
+</body>
+</html>
