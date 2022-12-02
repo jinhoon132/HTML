@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34.문서객체 가져오기(p360)</title>
+</head>
+<body>
+    <h1 id ="title">제목태그</h1>
+
+    <div id="box"><span>영역태그</span></div>
+    <div class="abc def"><span>영역태그</span></div>
+    <div class="abc"><span>영역태그</span></div>
+    <div class ="def"></div>
+
+
+
+    <script>
+        /*태그를 기준으로 객체지정*/
+        var allDiv = document.getElementsByTagName("div");
+        
+        console.log(allDiv);
+        allDiv[0].style.border = "2PX SOLID #f00";
+        allDiv[1].style.border = "2PX SOLID #ff0";
+        allDiv[2].style.border = "2PX SOLID #00f";
+
+        /*id를 기준으로 객체생성*/
+        var title = document.getElementById("title");
+        console.log(title);
+        with(title.style){
+            backgroundColor = "#fcc";
+            margin = "50px 20px";
+            color = "#fff";
+            lineHeight = "80px";
+        }
+
+        /*클래스를 기준으로 객체를 지정*/
+        var abc = document.getElementsByClassName("abc");
+        abc[0].style.backgroundColor = "#ccf";
+        abc[1].style.backgroundColor = "#fcc";
+        console.log(abc[0]);
+
+        var box = document.querySelector("#box");
+        box.style.background = "#cfc";
+
+        var div = document.querySelector("div");
+        div.style.fontSize = "30px";
+
+        var divAll = document.querySelectorAll("div");
+        divAll[0].style.color = "blue";
+        divAll[1].style.color = "red";
+        divAll[2].style.color = "gray";
+
+        var def = document.querySelectorAll(".def");
+        def[0].style.textAlign = "center";
+        def[1].style.textAlign = "left";
+
+        var span = document.querySelector(".abc span");
+        span.style.cssText = "font-size:50px; letter-spacing:5px;";
+
+        var last = document.querySelector("div:nth-child(3)");
+        console.log(last);
+        last.style.cssText = "transform:rotate(20deg) translateY(100px);"
+    </script>
+</body>
+</html>

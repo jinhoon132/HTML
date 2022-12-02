@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32.문서객체모델</title>
+
+ 
+</head>
+<body class = "this">
+
+    <script>
+        /*Html요소의 동적구현(p376)*/
+        var heading = document.createElement("h1");
+        var pp=document.createElement("p");
+        var image=document.createElement("img");
+
+        var text =document.createTextNode("문서객체모델");
+
+        document.body.appendChild(heading);
+        document.body.appendChild(pp);
+        pp.appendChild(image);
+        heading.innerHTML = "새로 생성된 DIV입니다"
+        heading.appendChild(text);
+
+        image.src = "../이미지/고양이.jpg";
+        image.width = 300;
+        image.height = 300;
+        image.title = "picture";
+        image.setAttribute("module","picture");
+        image.setAttribute("data-name","꽃이미지");
+
+        document.body.removeAttribute("class");
+
+        var image_w = image.width;
+        var image_h = image.height;
+
+        document.write("<p>이미지너비 :"+image_w +"</p>")
+        document.write("<p>이미지높이 :"+image_h +"</p>")
+        
+        var image_m = image.getAttribute("module");
+        document.write("<p>이미지모듈: " +image_m+"</p>")
+
+        image.setAttribute("data-abc",123);
+        image.setAttribute("data-text","이미지텍스트");
+
+        console.log(image.dataset);
+        document.write("<p>data-name: " +image.dataset.name+"</p>")
+        document.write("<p>data-text: " +image.dataset.text+"</p>")
+        document.write("<p>data-abc: " +image.dataset.abc+"</p>")
+        document.write("<p>data-abc: " +image.dataset["abc"]+"</p>")
+        image.dataset.text = "값바꾸기";
+        image.dataset.code = "코드값";
+
+        var div = document.createElement("div");
+        document.body.appendChild(div);
+        var output = "";
+        output+= "<ul id='pen'>";
+        output += "<li>연필</li>";
+        output += "<li>볼펜</li>";
+        output += "</ul>";
+
+        div.innerHTML=output;
+
+        //스타일을 동적으로 부여하기(p361)
+        div.style.backgroundColor = "#ffc";
+        div.style.fontSize = "30px";
+        div.style["color"]= "#00f";
+        div.style["font-weight"]= "bold";
+
+        div.style.cssText = "padding:20px; border:3px solid red;";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33 객체 추가설명</title>
+</head>
+<body>
+<script>
+    var num = [11,22,33,44,55];
+    console.log(num[3]);
+
+    var ob = {
+        a:10,
+        b:3,
+        "문자":22 //키에는 식별자 또는 문자열을 사용하여 구현가능
+    }
+
+    console.log(ob.문자); //키
+    console.log(ob['b']); //객체안의 내용을호출은 인덱스번호가 아니기에 키값은 "" ,''로 묶어준다
+
+    
+    console.log("a" in ob);
+    console.log("문자" in ob);
+    console.log("d" in ob);
+
+    delete(ob.a);
+    console.log("a" in ob);
+
+</script>
+</body>
+</html>

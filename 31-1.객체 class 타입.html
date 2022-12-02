@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Box</title>
+
+    <style>
+        tr{width:10px; height:20px;}
+        thead tr{height:40px; }
+    </style>
+    
+</head>
+<body>
+   
+    <script>
+        
+        
+
+        class Member
+        {
+            name="무명";
+            birthDay=new Date(1900,1,1);
+            age ="0";
+            tel="010-000-0000";
+            email="email";
+
+            constructor(n=this.name,b=this.birthDay,t=this.tel,e=this.email)
+            { 
+                this.name=n;
+                this.birthDay=b;
+                this.tel=t;
+                this.email=e;
+                
+                function ageing(){
+                    var now = new Date();
+                    this.age = now.getFullYear()-this.birthDay.getFullYear()+1;
+                }
+            }
+        }
+
+        
+        var m1 = new Member("김일월",new Date(2000,01,01),"010-111-1111","kkk111@naver.com");
+        var m2 = new Member("박이월",new Date(2001,02,02),"010-2244-2244","Feb@naver.com");
+        var m3 = new Member("정구월",new Date(1999,09,09),"010-111-1111","kkk111@naver.com");
+        
+        console.log("멤버1 이름:"+m1.name);
+        console.log("멤버1 나이:"+m1.age);
+   
+    </script>
+
+</body>
+</html>

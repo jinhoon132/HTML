@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35.Dom Tree(p377)</title>
+</head>
+<body>
+    <div>
+        <h2>Dom 트리</h2>
+        <ul id = "abc">
+            <li><a href = "#">버튼1</a></li>
+            <li><a href = "#">버튼2</a></li>
+            <li><a href = "#">버튼3</a></li>
+            <li><a href = "#">버튼4</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        let ul = document.getElementById("abc");
+        let count = ul.childElementCount; //자식의 갯수
+
+        console.log(count);
+        ul.style.background="red";
+
+        let liAll = ul.children; //자식요소를 배열로 가져옴
+        console.log(liAll);
+
+        liAll[2].style.fontSize = "20px";
+
+        let first = ul.firstElementChild;
+        first.style.background = "#fcc";
+
+        let last = ul.lastElementChild;
+        last.style.background = "#fcf";
+
+        let next = first.nextElementSibling;
+        next.style.background = "#ccf";
+
+        let prev = ul.previousElementSibling;
+        prev.style.color ="red";
+
+        let parent = ul.parentElement;
+        parent.style.border = "10px solid #000";
+   </script>
+</body>
+</html>
