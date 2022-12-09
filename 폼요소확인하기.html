@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼요소확인하기</title>
+</head>
+<body>
+    <h2>폼요소확인하기</h2>
+    <form action="작성된 데이터를 입력받을 시스템의 주소">
+        <p>
+            <label>입력폼:</label><!--폼요소의 이름표-->
+            <input type="text"/>
+        </p>
+        <p>
+            <label>비밀 번호 입력폼:</label><!--폼요소의 이름표-->
+            <input type="password"/>
+        </p>
+        <p>
+            <label>버튼</label><!--폼요소의 이름표-->
+            <input type="button" value="버튼"/>
+        </p>
+        <p>
+            <label>전송버튼:</label><!--폼요소의 이름표-->
+            <input type="submit"/><!--폼에 데이터를 전송-->
+        </p>
+        <p>
+            <label>초기화버튼:</label><!--폼요소의 이름표-->
+            <input type="reset"/><!--폼안에 입력된 데이터를 초기화-->
+        </p>
+        <p>
+            <label>이미지버튼</label><!--폼요소의 이름표-->
+            <input type="image" src="../123.jpg" width="150"/>
+        </p>
+        <p>
+            <label>체크박스:</label><!--폼요소의 이름표-->
+            <input type="checkbox" value="값"/>
+            <input type="checkbox" value="값"/>
+            <input type="checkbox" value="값"/>
+            <input type="checkbox" value="값"/>
+            <!--다수 항목을 선택할 수 있음-->
+        </p>
+        <p>
+            <label>라디오:</label><!--폼요소의 이름표-->
+            <input type="radio" name="btn" value="값"/>
+            <input type="radio" name="btn" value="값"/>
+            <input type="radio" name="btn" value="값"/>
+            <!--한가지의 항목만 선택할 수 있음-->
+        </p>
+        <p>
+            <label>여러줄 입력폼:</label><!--폼요소의 이름표-->
+            <textarea cols="20" rows="8"></textarea>
+            <!--
+                cols="20" : 한 행에 입력되는 글자수 크기
+                rows="8" : 표시되는 행의 갯수
+            -->
+        </p>
+        <p>
+            <label>리스트</label><!--폼요소의 이름표-->
+            <select>
+                <option>메뉴1</option>
+                <option>메뉴2</option>
+                <option>메뉴3</option>
+            </select>
+        </p>
+        <p>
+            <label>데이터리스트</label><!--폼요소의 이름표-->
+            <input type="text" list="data"/>
+            <datalist id="data">
+                <option>선택항목</option>
+                <option>선택항목</option>
+                <option>선택항목</option>
+            </datalist>
+        </p>
+        <p>
+            <h5>버튼태그</h5>
+            <button typ="button">일반버튼</button>
+            <button typ="submit">전송버튼</button>
+            <button typ="reset">취소버튼</button>
+        </p>
+    </form>
+    
+</body>
+</html>
