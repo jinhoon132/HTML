@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 제이쿼리시작하기</title>
+    <!--제이쿼리가 먼저 연결되어야지 사용가능하다.-->
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        function init(){
+        var body = jQuery("body");
+        /*jQuery함수 : 인수로 받은 대상을 기준으로 제이쿼리 객체를 만듦*/
+
+        body.css("background","#ffc");
+
+        jQuery("#box").css("width",200);
+        jQuery("#box").css("height",100);
+        jQuery("#box").css("background","red");
+
+    }
+
+    //jQuery(document).ready(init);
+    jQuery(init);//줄여서 사용
+
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    
+</body>
+</html>

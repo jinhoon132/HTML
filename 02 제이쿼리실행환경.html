@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 제이쿼리실행환경</title>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        /*
+            익명함수 : 이름이 없는 함수(호출이 불가능)
+
+            자가실행함수 : 호출없이 딱 한번 자동으로 실행되는 함수
+                - 맨 앞에 ";"의 의미는 이전 실행문이 마치지 못한 경우,
+                실행문을 끝내는 역할, 자가실행함수의 시그니쳐로 사용된다.
+        */
+    ;(function($){ //$=jQuery
+
+    
+
+
+
+        $(function(){
+            $("body").text("안녕하세요").css("background","#cff");
+            //함수체인(메소드체인) : 각 함수는 현재 대상(객체)을 리턴한다.
+        });
+
+    
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
