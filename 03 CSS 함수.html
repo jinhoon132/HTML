@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 CSS함수</title>
+    <style>
+        #this{width:100px; height: 50px; background:#ffc; font-size:30px;}
+    </style>
+
+    <script src="jquery-3.6.2.js"></script>
+    <script>   
+        /*window.onload = function(){
+            var thisDiv = document.querySelector("#this");
+            thisDiv.style.cssText = "border:10px solid #f00; font-weight:30px;"
+            thisDiv.style.background = "#fcc";
+            
+        }*/
+
+        $(function(){
+            //제이쿼리 CSS함수 : css제어용 함수
+            //인수가 하나인 경우: 해당 속성의 속성값을 추출하여 반환한다.
+            var box = $("#this");
+
+            let w = box.css("width"); //"100px"
+            let h = box.css("height"); // 50px
+
+            //인수가 두개인 경우 : 해당스타일을 인라인 스타일로 적용한다
+            box.css("height",200);
+            $(".clone").css("background","fcc").css("height",w);
+            h = parseInt();
+            $(".clone").css("width",h*4);
+
+            /*인수가 객체인 경우 : 객체안의 설정된 속성들을 적용시킴*/
+            var obj = {width:200, background:"#0f0", textAlign:"center"};
+
+            box.css(obj);
+            $(".clone").css({fontsize:50, fontweight:"bold"});
+
+
+        })
+
+    </script>
+</head>
+<body>
+    <div id="this">this</div>
+    <div class="clone">clone</div>
+</body>
+</html>

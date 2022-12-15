@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 이벤트제어</title>
+    <style>
+        a{font-size:30px; background: #000; color: #fff; font-weight:bold; padding:0 10px; margin: 0 10px; cursor:pointer;}
+    </style>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        $(function(){
+            var body = $("body");
+
+            //click함수 : 대상을 클릭하면, 인수로 받은 함수를 실행시킴
+            $(".btn2").click(bgChange);
+            
+            function bgChange(){
+                body.css("background","blue");
+            }
+
+            $(".btn3").click(function(){
+                body.css("background","green");
+            });
+
+            //mouseover함수 : 마우스를 올렸을 때, 인수로 받은 함수 실행
+            $(".btn4").mouseover(function(){
+                body.css("background","yellow");
+            });
+            //mouseout함수 : 마우스를 내렸을 때, 인수로 받은 함수 실행
+            $(".btn5").mouseoyt(function(){
+                body.css("background","cyan");
+            });
+            //hover함수 : 마우스를 올렸을 때, 내렸을때 각각의 함수 실행
+            $(".btn6").hover(overAction, outAction);
+
+            function overAction(){
+                body.css("background","pink");
+            }
+            function outAction(){
+                body.css("background","purple");
+            }
+
+            //on함수(주로사용되는 이벤트함수)
+            // - 첫번째인수 : 적용할 이벤트(여러 이벤트 설정가능)
+            // - 두번째인수 : 실행할 함수
+
+            body.css("height",3000);
+
+            $(window).on("resize scroll",function(){
+                body.css("background","gold");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <a class="btn1">red</a>
+    <a class="btn2">blue</a>
+    <a class="btn3">green</a>
+    <a class="btn4">yellow</a>
+    <a class="btn5">cyan</a>
+    <a class="btn6">pink</a>
+    <a class="btn7">mageta</a>
+    <script>
+        var a = doc
+        document.querySelector(".btn1").addEventListener("click",function(){
+            var color = this.innerHTML;
+            document.body.background = color;
+        });
+
+    </script>
+    
+</body>
+</html>

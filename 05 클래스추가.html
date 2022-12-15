@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 클래스추가</title>
+    <style>
+        p{margin:50px 0;}
+        a{font-size: 20px; font-weight: bold; color:#fff; background: #000; padding:20px 40px;}
+        a.close{background: #f00;}
+        #fixed_area{position: fixed; top:0; right:0; width:30%; height:100%; background: #fcc; transition: all .4s;
+            box-shadow:-4px 0 4px rgba(0,0,0,.2);}
+        #fixed_area.close{transform:translateX(100%);}
+    </style>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                $("#fixed_area").addClass("close");
+                //addClass():인수로 받은 클래스를 추가함
+            });
+
+            $(".btn2").click(function(){
+                $("#fixed_area").removeClass("close");
+                //removeClass():인수로 받은 클래스를 제거함
+            });
+
+            $(".btn3").click(function(){
+                $("#fixed_area").add(this).toggleClass("close");
+                //toggleClass(): 클래스가 없으면 추가 있으면 제거
+                //add() : 인수로 받은 대상을 추가
+                //not() : 인수로 받은 대상을 제외
+
+                var state = $("#fixed_area").hasClass("close");
+                //hasClass() : 해당 클래스가 있으면 true, 없으면 false를 반환
+                if(state) $(this).text("열림버튼");
+                else $(this).text("닫힘버튼");
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="fixed_area"></div>
+    <p><a class="btn1">클래스 추가</a></p>
+    <p><a class="btn2">클래스 제거</a></p>
+    <p><a class="btn3">클래스 추가/제거</a></p>
+    
+</body>
+</html>
