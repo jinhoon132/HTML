@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 아코디언메뉴만들기</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+
+        #menu{width: 300px; margin: 50px;}
+        #menu .btn{display: block; font-size: 16px; color:#ddd; text-decoration: none; text-transform: uppercase;
+            background: #333; line-height: 1em; padding: 20px; border:1px solid #000; border-top-color:#5c5c5c; position: relative;}
+        #menu .btn::before,
+        #menu .btn::after{content:''; position: absolute;width: 12px; height: 3px; right: 20px; top:50%; margin:-1.5px;
+                    background: #fff; transition: all .4s linear;}
+        #menu .btn::after{transform: rotate(90deg);}
+        #menu .active .btn::before,
+        #menu .active .btn::after{transform:rotate(180deg);}
+
+        #menu .sub{display:none;}
+        #menu .sub a{display: block; padding: 14px 30px; font-size: 15px; color: #777; background: #f1f1f1; border: 1px solid #ddd; border-top: 0; text-decoration:none;}
+    </style>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        $(function(){
+            $(".btn").click(function(){
+                var btn = $(this); //3개의 .btn중 클릭한 .btn을 뜻함
+                var sub = btn.siblings(".sub"); //btn과 형제요소인 .sub
+                $(".sub").not(sub).hide();
+                sub.toggle(); 
+
+                var li = btn.parent(); //btn의 부모요소를 선택함
+                $("#menu li").not(li).removeClass("active");
+                li.toggleClass("active");
+            });
+        })
+
+        /*
+            .slideDown();  : 아래로 슬라이드(숨김 + 표시)
+            .slideUp();  : 위로 슬라이드(표시 + 숨김)
+            .slideToggle(); : 표시 + 숨김 // 숨김 + 표시
+
+            .show(); : 대상을 표시함 
+            .hide(); : 대상을 표시하지 않음(숨김) 
+            .add(); : 객체의 대상을 추가
+            .not(); : 객체의 대상을 제거
+        */
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#" class="btn">menu 01</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">menu 01-1</a></li>
+                        <li><a href="#">menu 01-2</a></li>
+                        <li><a href="#">menu 01-3</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" class="btn">menu 02</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">menu 02-1</a></li>
+                        <li><a href="#">menu 02-2</a></li>
+                        <li><a href="#">menu 02-3</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" class="btn">menu 03</a>
+                <div class="sub">
+                    <ul>
+                        <li><a href="#">menu 03-1</a></li>
+                        <li><a href="#">menu 03-2</a></li>
+                        <li><a href="#">menu 03-3</a></li>
+                        <li><a href="#">menu 03-4</a></li>
+                    </ul>
+                </div>  
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
