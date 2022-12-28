@@ -14,20 +14,25 @@
                 - 맨 앞에 ";"의 의미는 이전 실행문이 마치지 못한 경우,
                 실행문을 끝내는 역할, 자가실행함수의 시그니쳐로 사용된다.
         */
-    ;(function($){ //$=jQuery
+
+        ;(function($){ //$==jQuery
+            //jQuery(document).ready(function(){});
+            $(function(){
+
+                $("body").text("안녕하세요.").css("background","#cff");
+                //메소드체인(함수체인)
+            });
+
+        })(jQuery);
+
+        (function 함수명(매개변수){})(인수); //자가실행 함수
+
+        ;(function 함수명(매개변수){})(인수); //자가실행 함수
+
+
+        
 
     
-
-
-
-        $(function(){
-            $("body").text("안녕하세요").css("background","#cff");
-            //함수체인(메소드체인) : 각 함수는 현재 대상(객체)을 리턴한다.
-        });
-
-    
-
-
 
     </script>
 </head>

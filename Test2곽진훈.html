@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유효성검사</title>
+
+    <style>
+        form{margin-left:40%;}
+        form input{width: 400px; height:40px; font-size:17px; background: rgb(188, 188, 245); border-color: rgb(170, 170, 253);}
+        form #btn{background: #00f; color: #fff; height: 50px; border-color:rgb(114, 114, 240);}
+    </style>
+
+    <form name="join" action="전송받을 시스템주소">
+        <h1>Create an account</h1>
+        <h3>Full Name</h3>
+        <p><input type="text" id="box" placeholder="ex. John Doe"/></p>
+        <h3>Email Address</h3>
+        <p><input type="email" id="mail" placeholder="ex. Johndoe@gmail.com"/></p>
+        <h3>Password</h3>
+        <p><input type="password" id="pw" placeholder="Min. 5 characters"/></p>
+        <p>By clicking "Create your account"below, you agree to</p>
+        <p>our terms of service and privacy policy.</p>
+        <p><input type="button" value="Create your account" id="btn" onclick=""formCheck()/></p>
+    </form>
+    
+    <script>
+        function formCheck(){
+            var box = document.getElementById("box");
+
+            //정규표현식
+            var id = /^[a-zA-Z0-9]{4,12}$/;
+            var mail = /^[0-9-zA-Z]([-_.]?[0-9a-zA-Z]*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z]))*.[a-zA-Z]{2,3}$/i;
+            var pw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
+            if(box.value == ""){
+                alert("box에 내용을 입력하세요.");
+                box.focus();
+                return false;
+            }else if(!id.test(box.value)){
+                alert("입력조건이 맞지않음.");
+                box.focus();
+                return false;
+            }
+            document.join.submit();
+        }
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
