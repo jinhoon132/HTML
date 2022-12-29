@@ -1,0 +1,33 @@
+람다식 : 함수 이름이 없는 익명함수를 만드는 것
+
+int add(int x, int, y){
+return x+y;
+}
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓람다식 : 반환타입과 함수명을 제거할 수 있다.
+
+(int x, int y) → {return x+y;}
+
+↓↓↓↓↓↓↓람다식 : 실행문이 한문장이면, 중괄호와 return을 같이 생략가능
+
+(int x, int y) → x + y;
+
+
+------------------------------------------
+
+void print(String str){
+	System.out.println(str);
+}
+
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓람다식
+
+(str) → {System.out.println(str);}
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓람다식 : 매개변수가 하나이면, ()생략가능
+
+str → {System.out.println(str);}
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓람다식 : 실행문이 한문장이면, 중괄호{} 생략가능
+
+str → System.out.println(str);
