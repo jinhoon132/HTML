@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축구 게시판</title>
+
+    <link href="../css/style.css" rel="stylesheet"/>
+    <!--폰트어썸-->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/c25d652be8.css" crossorigin="anonymous">
+
+     <!--플러그인 연결-->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!--스트립트 작성-->
+     <script src="../js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="../html/index.html"><img src="../images/logo.jpg" alt="로고사진"/></a>
+            <div class="label">
+                <label>ID</label><input type="text" name="id">
+                <label>PW</label><input type="password" name="pw"><br>
+                <input type="submit" value="로그인" name="submit" class="subm">
+                <input type="button" value="회원가입" name="join" class="join">
+            </div>
+        <ul class="menu">
+            <li class="ft ft1">
+              <a href="#">공지사항</a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">진행중 이벤트</a></li>
+                <li><a href="#">이벤트 당첨 발표</a></li>
+              </ul>
+            </li>
+            <li class="ft">
+              <a href="#">해외축구</a>
+              <ul class="submenu">
+                <li><a href="#">EPL</a></li>
+                <li><a href="#">라리가</a></li>
+                <li><a href="#">분데스리가</a></li>
+                <li><a href="#">리그1</a></li>
+                <li><a href="#">세리에A</a></li>
+                <li><a href="#">기타리그</a></li>
+              </ul>
+            </li>
+            <li class="ft">
+              <a href="#">국내축구</a>
+              <ul class="submenu">
+                <li><a href="#">K리그</a></li>
+                <li><a href="#">A대표팀</a></li>
+                <li><a href="#">국내선수 이슈</a></li>
+              </ul>
+            </li>
+            <li class="ft">
+              <a href="#">자유게시판</a>
+              <ul class="submenu">
+                <li><a href="#">축구칼럼</a></li>
+                <li><a href="#">축구 영상</a></li>
+                <li><a href="#">승부예측</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">축구용품</a></li>
+              </ul>
+            </li>
+            <li class="ft">
+              <a href="#">축구 게임</a>
+              <ul class="submenu">
+                <li><a href="#">FM</a></li>
+                <li><a href="#">FIFA</a></li>
+                <li><a href="#">위닝일레븐</a></li>
+                <li><a href="#">피파온라인4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <section id="main_view">
+    <div class="container">
+      
+        <article class="item1 item">
+          <div>
+              <h2>오늘의 이슈!!!</h2>
+              <p>자세히 보기</p>
+          </div>
+        </article>
+        <article class="item2 item">
+          <div>
+            <h2>오늘의 이슈!!!</h2>
+            <p>자세히 보기</p>
+          </div>
+        </article>
+        <article class="item3 item">
+          <div>
+            <h2>오늘의 이슈!!!</h2>
+            <p>자세히 보기</p>
+          </div>
+        </article>
+      
+    </div>
+    <div class="pager"></div>
+  </section>
+    <main>
+      <div class="topmenu">
+        <a href="#top"><img src="../images/up1.png" alt="맨위로"></a>
+      </div>
+        <iframe class="if1" src="../html/mainlist.html"></iframe>
+        <iframe class="if2" src="../html/mainlist2.html"></iframe>
+        <iframe class="if3" src="../html/mainlist3.html"></iframe>
+        <iframe class="if4" src="../html/mainlist4.html"></iframe>
+    </main>
+  
+    <footer>
+      <div class="foot">
+        <div>
+          <img src="../images/logo.jpg" alt="로고">
+        </div>
+        <ul>
+          <li>이용약관</li>
+          <li>|</li>
+          <li>개인정보취급방침</li>
+          <li>|</li>
+          <li>청소년보호정책</li>
+        </ul><br/>
+        <p>Copyright &copy; www.ezen.co.kr</p>
+        
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+*{padding:0; margin:0;}
+li{list-style:none;}
+a{text-decoration:none; font-size:15px;}
+
+
+
+header{position:relative; width:auto; height:91px; background-color: #6a6b6d;}
+    img{position:absolute; top:0; left:20px; width:150px; height:90px; border: none;}
+    .label{position:absolute; top:10px; right:20px; color:white;}
+    strong{font-size:20px;}
+    .label a{font-size:15px; margin-left:10px;}
+    input{width:100px; height:20px; margin-left:10px;}
+    .subm, .join{width:70px; height:25px; margin-top: 10px;}
+
+.menu {width:1300px; position:absolute; top:50px; left:300px; overflow:hidden; margin:0 auto;}
+.menu > li {width:170px; float:left; line-height:40px; background-color: #6a6b6d; text-align:center;}
+.ft a{font-size:18px; font-weight:bold;}
+.ft .submenu a{font-size:15px; font-weight:normal;}
+.menu a {color: #fff; display:block;}
+.submenu > li {line-height:35px; background-color:#6a6b6d;}
+.submenu {height:0; overflow:hidden;}
+.menu > li:hover {background-color: #000 ; transition-duration: 0.5s;}
+.menu > li:hover .submenu {height:auto; transition-duration: 1s;}
+.menu > li:hover .submenu > li:hover{background-color: #000;}
+
+main{position:relative; width:auto; height:1100px; margin-top:220px; border:1px solid #ff0; z-index: 10;}
+    .mypage{position:fixed; top:600px; left:40px; border: 2px solid #000; width:200px;}
+    p{font-size:20px; font-weight:bold; margin-bottom:20px; margin-left:20px;}
+    main a{font-size:15px; margin-left: 40px;}
+    .mypage li:first-child{font-weight: bold; margin-bottom:10px; margin-top: 20px;}
+    .mypage li:last-child{margin-bottom:20px;}
+    .topmenu{position:fixed; bottom:150px; right:60px; width:70px; height:70px; color: #000;}
+    .topmenu a{margin:0;}
+    .topmenu img{width:40px; height:40px; margin:0;}
+    iframe{width:550px; height:600px; border:none;}
+    .if1{position:absolute; left:20%; top:0px;}
+    .if2{position:absolute; right:15%; top:0px;}
+    .if3{position:absolute; left:20%; top:400px;}
+    .if4{position:absolute; right:15%; top:400px;}
+
+footer{width:100%; height:100px; position:relative; bottom:0; left:0; border: 1px solid #f00; background-color: #000;}
+    img{float:left; height:100%; margin-left:30px;}
+    .foot{margin-top:30px;}
+    .foot li{float:left; font-size:10px; text-align:center; margin:0 20px; color: #fff;}
+    .foot li:first-child{margin-left:40%;}
+    .foot p{font-size:12px; color:#fff; margin-left:45%;}
